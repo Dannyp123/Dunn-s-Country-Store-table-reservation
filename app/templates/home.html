@@ -1,2 +1,22 @@
-<title>Dunn's :: Home</title>
-<h1>I AM HERE!!</h1>
+{% extends 'base.html' %} {% block body %}
+<div class="navbar-fixed">
+    <nav class="z-depth-2">
+        <div class="nav-wrapper blue darken-4">
+            <span style="margin-left: 12px; font-size: 16pt">Dunn's Country Store</span>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="menu.hml">Menu</a></li>
+                <li><a href="beer-tobacco.html">Beer/Tobacco</a></li>
+                <li><a href="hunting-fishing.html">Hunting/Fishing</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="beer-tobacco.html">Beer/Tobacco</a></li>
+    <li><a href="hunting-fishing.html">Hunting/Fishing</a></li>
+</ul>
+</div>
+{% endblock body %}
