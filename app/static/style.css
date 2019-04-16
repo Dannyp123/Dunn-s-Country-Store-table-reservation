@@ -5,7 +5,7 @@
 
 .first {
     margin-top: 10px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 .second {
@@ -15,10 +15,25 @@
 .spacer {
     margin-top: 14px;
 }
+.spacer-middle {
+    margin-top: 16px;
+}
+
+.spacer-middle-link {
+    margin-top: 32px;
+}
 
 .space-header {
     margin-left: 12px;
     font-size: 16pt
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.card {
+    height: 375px !important;
 }
 
 .mt-3 {
