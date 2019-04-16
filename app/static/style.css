@@ -2,3 +2,25 @@
     width: 100%;
     height: 50%;
 }
+
+.first {
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.second {
+    margin-bottom: 14px;
+}
+
+.spacer {
+    margin-top: 14px;
+}
+
+.space-header {
+    margin-left: 12px;
+    font-size: 16pt
+}
+
+.mt-3 {
+    margin-top: 14px;
+}
