@@ -9,3 +9,7 @@ from django.shortcuts import redirect, render
 class HomePage(View):
     def get(self, request):
         return render(request, "home.html")
+
+class HuntingFishing(View):
+    def get(self, request):
+        return render(request, "hunting-fishing.html")

@@ -12,9 +12,14 @@
     margin-bottom: 14px;
 }
 
+.pb {
+    padding-bottom: 24px;
+}
+
 .spacer {
     margin-top: 14px;
 }
+
 .spacer-middle {
     margin-top: 16px;
 }
@@ -38,4 +43,22 @@
 
 .mt-3 {
     margin-top: 14px;
+}
+
+.big {
+    font-size: 15pt;
+}
+
+@media only screen and (min-width: 600px) {
+    .imgs {
+        position: relative;
+        left: 78px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .imgs {
+        position: relative;
+        left: 32px;
+    }
 }
