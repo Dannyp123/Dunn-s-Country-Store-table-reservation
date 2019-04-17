@@ -37,9 +37,17 @@
     font-weight: bold;
 }
 
-.card{
-    height: 435px !important;
+.fluid {
+    height: 545px;
 }
+
+.hourCard {
+    height: 375px;
+}
+
+/* .card{
+    height: 435px !important;
+} */
 
 .mt-3 {
     margin-top: 14px;
