@@ -21,5 +21,6 @@ urlpatterns = [
     path(
         "hunting-fishing",
         views.HuntingFishing.as_view(),
-        name="hunting-fishing")
+        name="hunting-fishing"),
+    path("beer-tobacco", views.BeerTobacco.as_view(), name="beer-tobacco")
 ]
