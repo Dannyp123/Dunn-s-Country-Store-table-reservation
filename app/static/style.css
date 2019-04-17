@@ -37,8 +37,8 @@
     font-weight: bold;
 }
 
-.card {
-    height: 375px !important;
+.card-1 {
+    height: 448px !important;
 }
 
 .mt-3 {
@@ -49,16 +49,47 @@
     font-size: 15pt;
 }
 
+
+/* PHONE SCREENS */
+@media only screen and (max-width: 450px) {
+    .card-1 {
+        height: 475px !important;
+    }
+
+    .img {
+        margin: 16px;
+    }
+}
+
+/* IPADS/TABLETS */
 @media only screen and (min-width: 600px) {
     .imgs {
         position: relative;
         left: 78px;
     }
+
+    .img {
+        margin: 18px;
+    }
+
+    .card-1 {
+        height: 448px !important;
+    }
 }
 
+/* LARGER SCREENS */
 @media only screen and (min-width: 1000px) {
     .imgs {
         position: relative;
         left: 32px;
+    }
+
+    .card-1 {
+        height: 448px !important;
+    }
+
+    .img {
+        position: relative;
+        left: 38px;
     }
 }
