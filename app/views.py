@@ -19,3 +19,8 @@ class HuntingFishing(View):
 class BeerTobacco(View):
     def get(self, request):
         return render(request, "beer-tobacco.html")
+
+
+class Menu(View):
+    def get(self, request):
+        return render(request, "menu.html")

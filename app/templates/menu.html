@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block body %}
+<title>Dunn's Country Store | Menu</title>
+<div class="navbar-fixed">
+    <nav class="z-depth-3">
+        <div class="nav-wrapper blue darken-4">
+            <span class="space-header">Dunn's Country Store</span>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+                <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+    <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+</ul>
+<div class="col s12 m8 l12">
+    <img id="headerImg" class="responsive-img" src="/static/images/menu.jpg" alt="Dunn's Country Store">
+</div>
+<p class="big-1 center-align">Breakfast</p>
+<div class="container">
+    <hr>
+
+    <div class="row spacer">
+        <div class="col l4 s12">
+            <div class="card menuCard">
+                <div class="card-content">
+                    <span class="card-title center-align">Omelets</span>
+                    <hr>
+                    <div class="spacer">
+                        <p class="flow-text center-align">Cheese Omelet</p>
+                    </div>
+                    <p class="center-align">Our Cheese Omelet is a delicious combinations of chesses Served with
+                        hashbrowns and toast. </p>
+                    <div class="spacer">
+                        <p class="center-align "><b>Price:</b>$ 4.69</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
