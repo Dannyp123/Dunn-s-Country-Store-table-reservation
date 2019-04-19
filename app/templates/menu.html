@@ -33,6 +33,9 @@
                     <span class="card-title center-align">Omelets</span>
                     <hr>
                     <div id="omeletsTemplate"></div>
+                    <div class="omeletImgs">
+                        <img class="col s12 l10 m8" src="/static/images/omelet.jpeg" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,6 +45,18 @@
                     <span class="card-title center-align">Breakfast Plates</span>
                     <hr>
                     <div id="platesTemplates"></div>
+                    <div class="breakfastImgs">
+                        <img class="col s12 l10 m8" src="/static/images/breakfast-plate.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col l4 s12">
+            <div class="card menuCard">
+                <div class="card-content">
+                    <span class="card-title center-align">Breakfast Biscuits</span>
+                    <hr>
+                    <div id="biscuitsTemplate"></div>
                 </div>
             </div>
         </div>
@@ -53,7 +68,7 @@
     </div>
         <p class="center-align">{% templatetag openvariable %} omelets.description {% templatetag closevariable %}</p>
         <div class="spacer">
-            <p class="center-align " style="margin-bottom: 19px;" ><b>Price:</b>$ {% templatetag openvariable %} omelets.price {% templatetag closevariable %}</p>
+            <p class="center-align " style="margin-bottom: 24px;" ><b>Price:</b> $ {% templatetag openvariable %} omelets.price {% templatetag closevariable %}</p>
         </div>
         <hr>
 </script>
@@ -63,7 +78,17 @@
     </div>
         <p class="center-align">{% templatetag openvariable %} plates.description {% templatetag closevariable %}</p>
         <div class="spacer">
-            <p class="center-align " style="margin-bottom: 19px;" ><b>Price:</b>$ {% templatetag openvariable %} plates.price {% templatetag closevariable %}</p>
+            <p class="center-align " style="margin-bottom: 24px;" ><b>Price:</b> $ {% templatetag openvariable %} plates.price {% templatetag closevariable %}</p>
+        </div>
+        <hr>
+</script>
+<script id="biscuits" type="text/x-handlebars-template">
+    <div class="spacer">
+            <p class="flow-text center-align">{% templatetag openvariable %} biscuits.name {% templatetag closevariable %}</p>
+    </div>
+        <p class="center-align">{% templatetag openvariable %} biscuits.description {% templatetag closevariable %}</p>
+        <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;" ><b>Price:</b> $ {% templatetag openvariable %} biscuits.price {% templatetag closevariable %}</p>
         </div>
         <hr>
 </script>

@@ -37,5 +37,23 @@ function settingUpPlates() {
     }
 }
 
+function settingUpBiscuits() {
+    var biscuit = document.querySelector("#biscuits").innerHTML;
+    var template = Handlebars.compile(biscuit);
+    console.log(BREAKFAST.biscuits);
+    for (index in BREAKFAST.biscuits) {
+        console.log(index);
+        let biscuits = BREAKFAST.biscuits[index];
+        var html = template({
+            index: index,
+            biscuits: biscuits
+        });
+        document
+            .querySelector("#biscuitsTemplate")
+            .insertAdjacentHTML("beforeend", html);
+    }
+}
+
 settingUpOmelets();
-settingUpPlates()
+settingUpPlates();
+settingUpBiscuits();

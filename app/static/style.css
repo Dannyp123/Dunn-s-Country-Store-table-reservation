@@ -49,6 +49,10 @@
     height: 375px;
 }
 
+.menuCard {
+    height: 825px;
+}
+
 /* .card{
     height: 435px !important;
 } */
@@ -71,6 +75,14 @@
     .img {
         margin: 16px;
     }
+
+    .omeletImgs {
+        margin-top: 28px;
+    }
+
+    .breakfatImgs {
+        margin-top: 28px;
+    }
 }
 
 /* IPADS/TABLETS */
@@ -78,6 +90,22 @@
     .imgs {
         position: relative;
         left: 78px;
+    }
+
+    .menuCard {
+        height: 865px;
+    }
+
+    .omeletImgs {
+        position: relative;
+        left: 95px;
+        margin-top: 22px;
+    }
+
+    .breakfastImgs {
+        position: relative;
+        left: 95px;
+        margin-top: 22px;
     }
 
     .img {
@@ -94,6 +122,20 @@
     .imgs {
         position: relative;
         left: 32px;
+    }
+
+    .omeletImgs {
+        position: relative;
+        left: 28px;
+    }
+
+    .breakfastImgs {
+        position: relative;
+        left: 28px;
+    }
+
+    .menuCard {
+        height: 845px;
     }
 
     .card-1 {
