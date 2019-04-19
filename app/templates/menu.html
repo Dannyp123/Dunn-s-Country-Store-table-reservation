@@ -36,16 +36,35 @@
                 </div>
             </div>
         </div>
+        <div class="col l4 s12">
+            <div class="card menuCard">
+                <div class="card-content">
+                    <span class="card-title center-align">Breakfast Plates</span>
+                    <hr>
+                    <div id="platesTemplates"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script id="omelets" type="text/x-handlebars-template">
-    console.log("I am here")
     <div class="spacer">
-            <p class="flow-text center-align">{{food.name}}</p>
+            <p class="flow-text center-align">{% templatetag openvariable %} omelets.name {% templatetag closevariable %}</p>
     </div>
-        <p class="center-align">{{food.description}}</p>
+        <p class="center-align">{% templatetag openvariable %} omelets.description {% templatetag closevariable %}</p>
         <div class="spacer">
-            <p class="center-align "><b>Price:</b>$ {{food.price}}</p>
+            <p class="center-align " style="margin-bottom: 19px;" ><b>Price:</b>$ {% templatetag openvariable %} omelets.price {% templatetag closevariable %}</p>
         </div>
+        <hr>
+</script>
+<script id="plates" type="text/x-handlebars-template">
+    <div class="spacer">
+            <p class="flow-text center-align">{% templatetag openvariable %} plates.name {% templatetag closevariable %}</p>
+    </div>
+        <p class="center-align">{% templatetag openvariable %} plates.description {% templatetag closevariable %}</p>
+        <div class="spacer">
+            <p class="center-align " style="margin-bottom: 19px;" ><b>Price:</b>$ {% templatetag openvariable %} plates.price {% templatetag closevariable %}</p>
+        </div>
+        <hr>
 </script>
 {% endblock body %}
