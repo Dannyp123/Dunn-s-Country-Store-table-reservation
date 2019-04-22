@@ -121,6 +121,52 @@
             </div>
         </div>
     </div>
+    <p class="big-1 center-align">Dinner</p>
+    <hr>
+    <p class="center-align burgerTitle">Hamburgers</p>
+
+    <div class="row spacer">
+        {% for r_burger in BREAKFAST.hburgers %}
+        <div class="col l4 s12">
+            <div class="card burgerCard">
+                <div class="card-content">
+                    <div class="spacer">
+                        <p class="flow-text center-align">{{r_burger.name}}</p>
+                    </div>
+                    <p class="center-align">{{r_burger.description}}</p>
+                    <div class="spacer">
+                        <p class="center-align " style="margin-bottom: 24px;"><b>Price:</b> $
+                            {{r_burger.price}}</p>
+                    </div>
+                    <hr>
+                    <div class="breakfastImgs">
+                        <img class="col s12 l10 m8" src="{{r_burger.img}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% for ch_burger in BREAKFAST.cburgers %}
+        <div class="col l4 s12">
+            <div class="card burgerCard">
+                <div class="card-content">
+                    <div class="spacer">
+                        <p class="flow-text center-align">{{ch_burger.name}}</p>
+                    </div>
+                    <p class="center-align">{{ch_burger.description}}</p>
+                    <div class="spacer">
+                        <p class="center-align " style="margin-bottom: 24px;"><b>Price:</b> $
+                            {{ch_burger.price}}</p>
+                    </div>
+                    <hr>
+                    <div class="breakfastImgs">
+                        <img class="col s12 l10 m8" src="{{ch_burger.img}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
 </div>
 {% endblock body %}

@@ -132,5 +132,17 @@ BREAKFAST = {
     }, {
         "name": "Grits",
         "price": 0.99,
-    }]
+    }],
+    "hburgers" : [{
+        "name" : "Regular Hamburger",
+        "description" : "Juicy Quarter Pounder made from lean ground chuck cooked to a delicious standard. Comes dressed and on a toasted Sour Dough bun. Comes with on side of your choice. ",
+        "price": 5.49,
+        "img": "/static/images/burger.jpeg"
+    }],
+    "cburgers" : [{
+        "name" : "Regular Cheeseburger",
+        "description": "Juicy Quarter Pounder made from lean ground chuck cooked to a delicious standard. Comes dressed the way you like them. They come on a toasted Sour Dough bun, and comes with on side of your choice. ",
+        "price" : 5.99,
+        "img" : "/static/images/ch-burger.jpg"
+    }],
 }
