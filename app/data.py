@@ -122,5 +122,15 @@ BREAKFAST = {
          1.79,
          "img":
          "/static/images/t-and-b.jpg"
-     }]
+     }],
+    "individuals": [{
+        "name": "Pancakes (each)",
+        "price": 1.49,
+    }, {
+        "name": "Oatmeal",
+        "price": 1.52,
+    }, {
+        "name": "Grits",
+        "price": 0.99,
+    }]
 }

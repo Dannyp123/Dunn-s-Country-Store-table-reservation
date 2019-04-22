@@ -102,5 +102,25 @@
         </div>
         {% endfor %}
     </div>
+    <div class="row spacer">
+
+        <div class="col l12 s12">
+            <div class="card indvCard">
+                {% for indv in BREAKFAST.individuals%}
+                <div class="card-content">
+                    <div class="spacer">
+                        <p class="flow-text center-align">{{indv.name}}</p>
+                    </div>
+                    <div class="spacer">
+                        <p class="center-align " style="margin-bottom: 24px;"><b>Price:</b> $
+                            {{indv.price}}</p>
+                    </div>
+                    <hr>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock body %}
