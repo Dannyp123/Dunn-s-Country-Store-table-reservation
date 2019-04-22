@@ -44,35 +44,41 @@ const BREAKFAST = {
     biscuits: [{
             name: "Biscuit and Gravy",
             description: `Get you a big plate with our warm, buttery biscuits covered in country white gravy. `,
-            price: 1.59
+            price: 1.59,
+            img: "/static/images/b-and-g.jpg"
         },
 
         {
             name: "Sausage and Biscuit",
             description: `Get you a warm, buttery biscuit with a great piece of sauage in between. Add eggs or cheese for $ 0.50 $ 0.20.`,
-            price: 1.79
+            price: 1.79,
+            img: "/static/images/s-and-b.jpg"
         },
         {
             name: "Bacon and Biscuit",
             description: `Get you a warm, buttery biscuit with some tasty bacon in between.  Add eggs or cheese for $ 0.50 $ 0.20.`,
-            price: 1.99
+            price: 1.99,
+            img: "/static/images/b-and-b.jpeg"
         },
         {
             name: "Chicken Biscuit",
             description: `Get you a warm, buttery biscuit with some southern fried chicken in between.  Add eggs or cheese for $ 0.50 $ 0.20.`,
-            price: 1.79
+            price: 1.79,
+            img: "/static/images/c-and-b.jpg"
         },
 
         {
             name: "Ham Biscuit",
             description: `Get you a warm, buttery biscuit with a thick slice of smokin' hot ham in between.  Add eggs or cheese for $ 0.50 $ 0.20.`,
-            price: 1.79
+            price: 1.79,
+            img: "/static/images/h-and-b.jpeg"
         },
 
         {
             name: "Turkey Biscuit",
             description: `Get you a warm, buttery biscuit with a thick slice of hot turkey in between.  Add eggs or cheese for $ 0.50 $ 0.20.`,
-            price: 1.79
+            price: 1.79,
+            img: "/static/images/t-and-b.jpg"
         }
 
     ]

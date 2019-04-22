@@ -3,6 +3,7 @@ from django.views import View
 from app import forms
 from app import models
 from django.shortcuts import redirect, render
+from app.data import BREAKFAST
 
 
 # Create your views here.
@@ -23,4 +24,4 @@ class BeerTobacco(View):
 
 class Menu(View):
     def get(self, request):
-        return render(request, "menu.html")
+        return render(request, "menu.html", {"BREAKFAST": BREAKFAST})

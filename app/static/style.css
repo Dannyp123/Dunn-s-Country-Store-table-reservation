@@ -84,6 +84,10 @@
         margin-top: 28px;
     }
 
+    .menuCard {
+        height: 475px;
+    }
+
     .biscuitTitle {
         font-size: 28px;
     }
@@ -105,7 +109,7 @@
     }
 
     .menuCard {
-        height: 865px;
+        height: 550px;
     }
 
     .omeletImgs {
