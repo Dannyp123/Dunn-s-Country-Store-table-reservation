@@ -50,7 +50,7 @@
 }
 
 .menuCard {
-    height: 825px;
+    height: 425px;
 }
 
 /* .card{
@@ -82,6 +82,18 @@
 
     .breakfatImgs {
         margin-top: 28px;
+    }
+
+    .biscuitTitle {
+        font-size: 28px;
+    }
+
+    .omeletTitle {
+        font-size: 28px;
+    }
+
+    .plateTitle {
+        font-size: 28px;
     }
 }
 
@@ -115,6 +127,18 @@
     .card-1 {
         height: 448px !important;
     }
+
+    .biscuitTitle {
+        font-size: 28px;
+    }
+
+    .omeletTitle {
+        font-size: 28px;
+    }
+
+    .plateTitle {
+        font-size: 28px;
+    }
 }
 
 /* LARGER SCREENS */
@@ -135,7 +159,7 @@
     }
 
     .menuCard {
-        height: 845px;
+        height: 460px;
     }
 
     .card-1 {
@@ -145,5 +169,17 @@
     .img {
         position: relative;
         left: 38px;
+    }
+
+    .biscuitTitle {
+        font-size: 38px;
+    }
+
+    .omeletTitle {
+        font-size: 38px;
+    }
+
+    .plateTitle {
+        font-size: 38px;
     }
 }

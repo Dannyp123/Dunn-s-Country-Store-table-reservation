@@ -32,7 +32,7 @@ function settingUpPlates() {
             plates: plates
         });
         document
-            .querySelector("#platesTemplates")
+            .querySelector("#platesTemplate")
             .insertAdjacentHTML("beforeend", html);
     }
 }
