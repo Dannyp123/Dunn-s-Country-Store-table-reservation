@@ -92,6 +92,18 @@
         height: 525px;
     }
 
+    .phillyCard {
+        height: 550px;
+    }
+
+    .bbqCard {
+        height: 615px;
+    }
+
+    .chickCard {
+        height: 575px;
+    }
+
     .biscuitTitle {
         font-size: 28px;
     }
@@ -111,6 +123,18 @@
     .specburgerTitle {
         font-size: 28px;
     }
+
+    .phillyTitle {
+        font-size: 28px;
+    }
+
+    .bbqTitle {
+        font-size: 28px;
+    }
+
+    .titles {
+        font-size: 28px;
+    }
 }
 
 /* IPADS/TABLETS */
@@ -126,6 +150,18 @@
 
     .burgerCard {
         height: 600px;
+    }
+
+    .phillyCard {
+        height: 645px;
+    }
+
+    .bbqCard {
+        height: 680px;
+    }
+
+    .chickCard {
+        height: 625px;
     }
 
     .omeletImgs {
@@ -148,23 +184,7 @@
         height: 448px !important;
     }
 
-    .biscuitTitle {
-        font-size: 28px;
-    }
-
-    .omeletTitle {
-        font-size: 28px;
-    }
-
-    .plateTitle {
-        font-size: 28px;
-    }
-
-    .burgerTitle {
-        font-size: 28px;
-    }
-
-    .specburgerTitle {
+    .titles {
         font-size: 28px;
     }
 }
@@ -194,6 +214,18 @@
         height: 535px;
     }
 
+    .phillyCard {
+        height: 585px;
+    }
+
+    .bbqCard {
+        height: 615px;
+    }
+
+    .chickCard {
+        height: 575px;
+    }
+
     .card-1 {
         height: 448px !important;
     }
@@ -203,23 +235,7 @@
         left: 38px;
     }
 
-    .biscuitTitle {
-        font-size: 38px;
-    }
-
-    .omeletTitle {
-        font-size: 38px;
-    }
-
-    .plateTitle {
-        font-size: 38px;
-    }
-
-    .burgerTitle {
-        font-size: 38px;
-    }
-
-    .specburgerTitle {
+    .titles {
         font-size: 38px;
     }
 }

@@ -26,7 +26,7 @@
 <div class="container">
   <hr />
   <div class="container">
-    <p class="center-align omeletTitle">Omelets</p>
+    <p class="center-align titles">Omelets</p>
   </div>
   <div class="row spacer">
     {% for omelet in BREAKFAST.omelets%}
@@ -53,7 +53,7 @@
   </div>
 
   <div class="container">
-    <p class="center-align plateTitle">Breakfast Plates</p>
+    <p class="center-align titles">Breakfast Plates</p>
   </div>
   <div class="row spacer">
     {% for plate in BREAKFAST.plates %}
@@ -80,7 +80,7 @@
   </div>
 
   <div class="container">
-    <p class="center-align biscuitTitle">Breakfast Biscuits</p>
+    <p class="center-align titles">Breakfast Biscuits</p>
   </div>
   <div class="row spacer">
     {% for biscuit in BREAKFAST.biscuits %}
@@ -126,7 +126,7 @@
   </div>
   <p class="big-1 center-align">Dinner</p>
   <hr />
-  <p class="center-align burgerTitle">Hamburgers</p>
+  <p class="center-align titles">Hamburgers</p>
 
   <div class="row spacer">
     {% for r_burger in BREAKFAST.hburgers %}
@@ -214,7 +214,7 @@
     </div>
     {% endfor %}
   </div>
-  <p class="center-align specburgerTitle">Specialty Hamburgers</p>
+  <p class="center-align titles">Specialty Hamburgers</p>
   <div class="row spacer">
     {% for msb_burger in BREAKFAST.rmsburger %}
     <div class="col l4 s12">
@@ -240,17 +240,17 @@
       </div>
     </div>
     {% endfor %}
-    {% for msb_burger in BREAKFAST.rmsburger %}
+    {% for smkh_burger in BREAKFAST.smkhburger %}
     <div class="col l4 s12">
       <div class="card burgerCard">
         <div class="card-content">
           <div class="spacer">
-            <p class="flow-text center-align">{{ msb_burger.name }}</p>
+            <p class="flow-text center-align">{{ smkh_burger.name }}</p>
           </div>
-          <p class="center-align">{{ msb_burger.description }}</p>
+          <p class="center-align">{{ smkh_burger.description }}</p>
           <div class="spacer">
             <p class="center-align " style="margin-bottom: 24px;">
-              <b>Price:</b> $ {{ msb_burger.price }}
+              <b>Price:</b> $ {{ smkh_burger.price }}
               <p class="center-align">
                 <b>Make it a jumbo for $ 7.99</b>
               </p>
@@ -258,12 +258,300 @@
           </div>
           <hr />
           <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ msb_burger.img }}" />
+            <img class="col s12 l10 m8" src="{{ smkh_burger.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for pm_burger in BREAKFAST.pmburger %}
+    <div class="col l4 s12">
+      <div class="card burgerCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ pm_burger.name }}</p>
+          </div>
+          <p class="center-align">{{ pm_burger.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ pm_burger.price }}
+              <p class="center-align">
+                <b>Make it a jumbo for $ 7.99</b>
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ pm_burger.img }}" />
           </div>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
+  <p class="center-align titles">Phillies</p>
+  <div class="row spacer">
+    {% for pchstk in BREAKFAST.phchstk %}
+    <div class="col l6 s12">
+      <div class="card phillyCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ pchstk.name }}</p>
+          </div>
+          <p class="center-align">{{ pchstk.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ pchstk.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ pchstk.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for chkphilly in BREAKFAST.ckphilly %}
+    <div class="col l6 s12">
+      <div class="card phillyCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ chkphilly.name }}</p>
+          </div>
+          <p class="center-align">{{ chkphilly.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ chkphilly.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ chkphilly.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="center-align titles">BBQ</p>
+  <div class="row spacer">
+    {% for rbbq in BREAKFAST.regbbq %}
+    <div class="col l4 s12">
+      <div class="card bbqCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ rbbq.name }}</p>
+          </div>
+          <p class="center-align">{{ rbbq.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ rbbq.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ rbbq.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for jbbq in BREAKFAST.jumbobbq %}
+    <div class="col l4 s12">
+      <div class="card bbqCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ jbbq.name }}</p>
+          </div>
+          <p class="center-align">{{ jbbq.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ jbbq.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ jbbq.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for bbqpte in BREAKFAST.bbqplate %}
+    <div class="col l4 s12">
+      <div class="card bbqCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ bbqpte.name }}</p>
+          </div>
+          <p class="center-align">{{ bbqpte.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ bbqpte.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ bbqpte.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for bbqpboy in BREAKFAST.bbqpoboy %}
+    <div class="col l4 s12">
+      <div class="card bbqCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ bbqpboy.name }}</p>
+          </div>
+          <p class="center-align">{{ bbqpboy.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ bbqpboy.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ bbqpboy.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for chopped in BREAKFAST.choppedbbq %}
+    <div class="col l4 s12">
+      <div class="card bbqCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ chopped.name }}</p>
+          </div>
+          <p class="center-align">{{ chopped.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ chopped.price }} per pound
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ chopped.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="center-align titles">Chicken</p>
+  <div class="row spacer">
+    {% for twotend in BREAKFAST.twotenders %}
+    <div class="col l4 s12">
+      <div class="card chickCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ twotend.name }}</p>
+          </div>
+          <p class="center-align">{{ twotend.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ twotend.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ twotend.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for threetend in BREAKFAST.threetenders %}
+    <div class="col l4 s12">
+      <div class="card chickCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ threetend.name }}</p>
+          </div>
+          <p class="center-align">{{ threetend.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ threetend.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ threetend.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for indiv in BREAKFAST.indvtenders %}
+    <div class="col l4 s12">
+      <div class="card chickCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ indiv.name }}</p>
+          </div>
+          <p class="center-align">{{ indiv.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ indiv.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ indiv.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% for grllchick in BREAKFAST.grlldchick %}
+    <div class="col l4 s12">
+      <div class="card chickCard">
+        <div class="card-content">
+          <div class="spacer">
+            <p class="flow-text center-align">{{ grllchick.name }}</p>
+          </div>
+          <p class="center-align">{{ grllchick.description }}</p>
+          <div class="spacer">
+            <p class="center-align " style="margin-bottom: 24px;">
+              <b>Price:</b> $ {{ grllchick.price }}
+              <p class="center-align">
+              </p>
+            </p>
+          </div>
+          <hr />
+          <div class="breakfastImgs">
+            <img class="col s12 l10 m8" src="{{ grllchick.img }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
   {% endblock body %}
 </div>

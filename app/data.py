@@ -168,5 +168,79 @@ BREAKFAST = {
         "description" : "Juicy Quarter pounder topped with grilled onions, bacon, cheddar cheese, and BBQ sauce. Comes served on a toasted Sourdough bun ",
         "price" : 6.99,
         "img" : "/static/images/smkhb.jpg"
+    }],
+    "pmburger": [{
+        "name" : "Patty Melt",
+        "description" : " Mean Gene's Regular Hamburger smothered in swiss cheese and grilled onions on buttery Texas Toast.",
+        "price" : 6.99,
+        "img" : "/static/images/pmb.jpg"
+    }],
+    "phchstk" : [{
+        "name" : "Philly Cheese Steak",
+        "description" : "Shredded steak seared with onions and bell pepper and melted in swiss cheese. ",
+        "price" : 7.99,
+        "img" : "/static/images/phillystk.jpg"
+
+    }],
+    "ckphilly" : [{
+        "name" : "Chicken Philly",
+        "description" : "Shredded Chicken breast seared with onions and bell pepper and melted in swiss cheese. ",
+        "price" : 7.99,
+        "img" : "/static/images/chickphilly.jpg"
+    }], 
+    "regbbq" : [{
+        "name" : "Regular BBQ Sandwich",
+        "description" : "Slow cooked and Hickory smoked with Mean Gene's BBQ rub. 2 ounces chopped and smothered in BBQ sause. Can get slaw on the sandwich or on the side. Comes with one side of your choice. ",
+        "price" : 5.49,
+        "img" : "/static/images/rbbq.jpeg"
+    }],
+    "jumbobbq" : [{
+        "name" : "Jumbo BBQ Sandwich",
+        "description" : " Slow cooked and Hickory smoked with Mean Gene's BBQ rub. 4 ounces chopped and smothered in BBQ sause. Can get slaw on the sandwich or on the side. Comes with one side of your choice.",
+        "price" : 6.99,
+        "img" : "/static/images/jbbq.jpg"
+    }],
+    "bbqplate" : [{
+        "name" : "BBQ Plate",
+        "description" : "Slow cooked and Hickory smoked with Mean Gene's BBQ rub. 5 ounces chopped and plated with a Sourdough Bun with the sause on the side. Comes with two sides of your choice. ",
+        "price" : 9.49,
+        "img" : "/static/images/bbqplate.jpg"
+    }],
+    "bbqpoboy" : [{
+        "name" : "BBQ Poboy",
+        "description" : "low cooked and Hickory smoked with Mean Gene's BBQ rub. 4 ounces chopped and served on a toasted hoggie bun smothered in slaw and sauce. ",
+        "price" : 7.99,
+        "img" : "/static/images/bbqpoboy.jpg"
+    }],
+    "choppedbbq" : [{
+        "name" : "Chopped BBQ",
+        "description" : "Slow cooked and Hickory smoked with Mean Gene's BBQ rub. We weigh out to your specified needs. Comes with 4 ounces of sause per pound, and comes hot or cold.",
+        "price" : 7.99,
+        "img" : "/static/images/choppedbbq.JPG"
+    }],
+    "twotenders" : [{
+        "name" : "2 piece tenders",
+        "description" : "Two deep fried juicy tenders cooked to a crispy brown color. Comes with one side of your choice. ",
+        "price": 5.99,
+        "img" : "/static/images/twotenders.jpg"
+    }],
+        "threetenders" : [{
+        "name" : "3 piece tenders",
+        "description" : "Three deep fried juicy tenders cooked to a crispy brown color. Comes with one side of your choice. ",
+        "price": 8.49,
+        "img" : "/static/images/threetenders.JPG"
+    }],
+        "indvtenders" : [{
+        "name" : "Individual Pieces",
+        "description" : "Deep fried juicy tenders cooked to a crispy brown color. Comes with one side of your choice. ",
+        "price": 2.49,
+        "img" : "/static/images/singletender.jpg"
+    }],
+    "grlldchick" : [{
+        "name" : "Grilled Chicken Plate",
+        "description" : "Delicious grilled Chicken breast. Covered with our special seasoning and comes with one side. ",
+        "price" : 8.49,
+        "img" : "/static/images/chicken-breast.jpg"
     }]
+
 }
