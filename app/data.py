@@ -241,6 +241,30 @@ BREAKFAST = {
         "description" : "Delicious grilled Chicken breast. Covered with our special seasoning and comes with one side. ",
         "price" : 8.49,
         "img" : "/static/images/chicken-breast.jpg"
-    }]
+    }],
+    "grllchkpboy" : [{
+        "name" : "Grilled Chicken Poboy",
+        "description" : "Delicious grilled Chicken breast. Covered with our special seasoning cut into chunks and comes with one side. ",
+        "price" : 7.99,
+        "img" : "/static/images/gchikpboy.jpg"
+    }],
+        "shrimppboy" : [{
+        "name" : "Shrimp Poboy",
+        "description" : "4 pieces of golden brown shrimp served on a toasted hoggie bun. Comes with tomatoe, lettuce, and our house sause, WingDing. Comes with one side our your choice ",
+        "price" : 7.99,
+        "img" : "/static/images/shrimpoboy.jpg"
+    }],
+        "wdpboy" : [{
+        "name" : "WingDing Poboy",
+        "description" : "4 pieces of golden brown Chicken nuggets served on a toasted hoggie bun. Comes with tomatoe, lettuce, swiss cheese and WindDing sause. Comes with one side our your choice.  ",
+        "price" : 7.99,
+        "img" : "/static/images/frdchick.jpeg"
+    }],
+        "stkpboy" : [{
+        "name" : "Steak Poboy",
+        "description" : "Delicious steak. Covered with our special seasoning cut into chunks and comes with one side. ",
+        "price" : 7.99,
+        "img" : "/static/images/steakpoboy.jpeg"
+    }],
 
 }
