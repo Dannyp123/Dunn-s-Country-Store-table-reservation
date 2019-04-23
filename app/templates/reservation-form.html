@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block body %}
+<title>Dunn's Country Store | Reservation</title>
+<div class="navbar-fixed">
+    <nav class="z-depth-3">
+        <div class="nav-wrapper blue darken-4">
+            <span class="space-header">Dunn's Country Store</span>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+                <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
+    <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+    <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+</ul>
+
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title center-align">Table Reservation</span>
+            <p class="center-align">Tables can be already be taken</p>
+            <hr>
+            <form action="">
+                <div class="row">
+                    <div class="input-field col l6 s12">
+                        <input id="first_name" type="text" name="f_name" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col l6 s12">
+                        <input id="last_name" type="text" name="l_name" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-feild col l6 s12">
+                        <input id="phone_number" type="text" name="p_number" class="validate">
+                        <label for="phone_number">Phone Number</label>
+                    </div>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
