@@ -266,5 +266,40 @@ BREAKFAST = {
         "price" : 7.99,
         "img" : "/static/images/steakpoboy.jpeg"
     }],
+    "hbs" : [{
+        "name" : "Hamburger Steak",
+        "description" : "Our Hamburger Steak is a Regular patty cooked to our delicious standard cooked with sauted onions and then topped with hot brown gravy. Comes with one side and Texas Toast. ",
+        "price" : 8.99,
+        "img" : "/static/images/hbs.jpg"
+    }],
+    "steaks" : [{
+        "name" : "8oz Ribeye, 12oz Ribeye, 16oz Sirloin",
+        "description" : "*ONLY ON FRIDAY AND SATURDAY NIGHTS* We proudly serve Ribeyes and Sirloins to our customers. Cooked the way you like them. Comes with a baked potatoe and Texas Toast. Can get a trip to our fully stocked salad bar for $2.99. ",
+        "img" : "/static/images/steak.jpeg"
+    }],
+    "twofish" : [{
+        "name" : "2 piece fish",
+        "description" : " We proudly server America grown Catfish fillets. We hand battered thick fillets and deep fry them to golden perfection. Comes with hand dipped hushpuppies and one side of your choice Individual piece is $ 2.49.",
+        "price" : 6.99,
+        "img" : "/static/images/twofish.jpg"
+    }],
+        "threefish" : [{
+        "name" : "3 piece fish",
+        "description" : " We proudly server America grown Catfish fillets. We hand battered thick fillets and deep fry them to golden perfection. Comes with hand dipped hushpuppies and one side of your choice Individual piece is $ 2.49.",
+        "price" : 10.99,
+        "img" : "/static/images/threefish.jpg"
+    }],
+        "fivefish" : [{
+        "name" : "5 piece fish",
+        "description" : " We proudly server America grown Catfish fillets. We hand battered thick fillets and deep fry them to golden perfection. Comes with hand dipped hushpuppies and one side of your choice Individual piece is $ 2.49.",
+        "price" : 14.99,
+        "img" : "/static/images/fivefish.jpg"
+    }],
+    "sides" : [{
+        "name" : "French Fries, Spicy Fries, Baked Beans, Corn Nuggets, Tator Tots, Cole Slaw ",
+        "price" : 1.79,
+        "extra" : "Onion Rings: $ 2.19,  Potatoe Salad: $ 2.19",
+        "img" : "/static/images/onionrings.jpg"
+    }]
 
 }

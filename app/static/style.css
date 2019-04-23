@@ -65,6 +65,10 @@
     font-size: 15pt;
 }
 
+.fontColor {
+    color: #0d47a1
+}
+
 
 /* PHONE SCREENS */
 @media only screen and (max-width: 450px) {
@@ -101,7 +105,23 @@
     }
 
     .chickCard {
-        height: 575px;
+        height: 525px;
+    }
+
+    .bigChickCard {
+        height: 450px;
+    }
+
+    .bigSteakCard {
+        height: 400px;
+    }
+
+    .fishCard {
+        height: 600px;
+    }
+
+    .sideCard {
+        height: 475px;
     }
 
     .biscuitTitle {
@@ -149,7 +169,7 @@
     }
 
     .burgerCard {
-        height: 600px;
+        height: 615px;
     }
 
     .phillyCard {
@@ -164,6 +184,22 @@
         height: 625px;
     }
 
+    .bigChickCard {
+        height: 545px;
+    }
+
+    .bigSteakCard {
+        height: 480px;
+    }
+
+    .fishCard {
+        height: 755px;
+    }
+
+    .sideCard {
+        height: 700px;
+    }
+
     .omeletImgs {
         position: relative;
         left: 95px;
@@ -174,6 +210,30 @@
         position: relative;
         left: 95px;
         margin-top: 22px;
+    }
+
+    .onionImg {
+        margin-top: 22px;
+        position: relative;
+        left: 16%;
+    }
+
+    .chickImg {
+        margin-top: 22px;
+        position: relative;
+        left: 18%;
+    }
+
+    .steakpoboyImg {
+        margin-top: 22px;
+        position: relative;
+        left: 18%;
+    }
+
+    .jcbImages {
+        margin-top: 22px;
+        position: relative;
+        left: 18%;
     }
 
     .img {
@@ -206,12 +266,36 @@
         left: 28px;
     }
 
+    .chickImg {
+        margin-top: 22px;
+        position: relative;
+        left: 22%;
+    }
+
+    .onionImg {
+        margin-top: 22px;
+        position: relative;
+        left: 33%;
+    }
+
+    .jcbImages {
+        margin-top: 22px;
+        position: relative;
+        left: 25%;
+    }
+
+    .steakpoboyImg {
+        margin-top: 22px;
+        position: relative;
+        left: 24%;
+    }
+
     .menuCard {
         height: 460px;
     }
 
     .burgerCard {
-        height: 535px;
+        height: 560px;
     }
 
     .phillyCard {
@@ -219,11 +303,28 @@
     }
 
     .bbqCard {
-        height: 615px;
+        height: 645px;
     }
 
     .chickCard {
-        height: 575px;
+        height: 545px;
+    }
+
+    .bigChickCard {
+        height: 680px;
+    }
+
+
+    .bigSteakCard {
+        height: 580px;
+    }
+
+    .fishCard {
+        height: 615px;
+    }
+
+    .sideCard {
+        height: 525px;
     }
 
     .card-1 {
