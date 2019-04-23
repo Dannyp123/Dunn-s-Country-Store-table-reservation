@@ -107,6 +107,10 @@
     .burgerTitle {
         font-size: 28px
     }
+
+    .specburgerTitle {
+        font-size: 28px;
+    }
 }
 
 /* IPADS/TABLETS */
@@ -159,6 +163,10 @@
     .burgerTitle {
         font-size: 28px;
     }
+
+    .specburgerTitle {
+        font-size: 28px;
+    }
 }
 
 /* LARGER SCREENS */
@@ -208,6 +216,10 @@
     }
 
     .burgerTitle {
+        font-size: 38px;
+    }
+
+    .specburgerTitle {
         font-size: 38px;
     }
 }

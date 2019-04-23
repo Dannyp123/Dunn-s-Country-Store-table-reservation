@@ -145,4 +145,28 @@ BREAKFAST = {
         "price" : 5.99,
         "img" : "/static/images/ch-burger.jpg"
     }],
+    "jhburgers" : [{
+        "name" : "Jumbo Hamburger",
+        "description" : "One pound of juicy lean ground chunk cooked to a delicious standard. Comes dressed and on a toasted Sour Dough bun. Comes with on side of your choice.",
+        "price" : 6.99,
+        "img" : "/static/images/jhb.jpg"
+    }],
+    "jcburgers" : [{
+        "name" : "Jumbo Cheeseburger",
+        "description" : "One pound of juicy lean ground chuck cooked to a delicious standard. Comes dressed the way you prefer. Also comes on a toasted Sour Dough bun. Comes with on side of your choice. ",
+        "price" : 7.49,
+        "img" : "/static/images/jcb.JPG"
+    }],
+    "rmsburger" : [{
+        "name" : "Mushroom Swiss Burger",
+        "description" : "Hand crafted Quarter Pounder topped with grilled mushrooms and swiss chesse on a Sourdough Bun.",
+        "price" : 6.99,
+        "img" : "/static/images/msb.jpg"
+    }],
+    "smkhburger" : [{
+        "name" : "Smokehouse Burger",
+        "description" : "Juicy Quarter pounder topped with grilled onions, bacon, cheddar cheese, and BBQ sauce. Comes served on a toasted Sourdough bun ",
+        "price" : 6.99,
+        "img" : "/static/images/smkhb.jpg"
+    }]
 }
