@@ -27,6 +27,7 @@
     <div class="card">
         <div class="card-content">
             <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name}} {{ table.l_name }}</a>
+            Table for: <p class="header">{{ table.num_of_people }}</p>
             <hr>
         </div>
     </div>

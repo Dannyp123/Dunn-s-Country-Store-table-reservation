@@ -81,12 +81,8 @@ input:-ms-input-placeholder {
     margin-right: 16px;
 }
 
-.mt-3 {
-    mahourCard
-}
-
 .big {
-    hourCard font-size: 15pt;
+    font-size: 15pt;
 }
 
 .fontColor {
@@ -372,7 +368,7 @@ input:-ms-input-placeholder {
     }
 
     .hourCard {
-        height: 380px;
+        height: 425px;
     }
 
     .card-1 {
