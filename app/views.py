@@ -45,7 +45,7 @@ class MakeReservation(View):
             models.TableReservation.submit_reservation(
                 f_name, l_name, p_number, num_of_people, date, time)
 
-            return redirect("reservation")
+            return redirect("home")
 
         else:
             return render(request, "reservation-form.html",
@@ -56,3 +56,15 @@ class TableReservation(View):
     def get(self, request):
         return render(request, "reservation-form.html",
                       {"reserve": models.TableReservation.objects.all()})
+
+
+class ReservedTables(View):
+    def get(self, request):
+        return render(request, "reservered-tables.html",
+                      {"reserved": models.TableReservation.objects.all()})
+
+
+class ReservedTable(View):
+    def get(self, request, id):
+        return render(request, "reserved-table.html",
+                      {"reserved_table": models.TableReservation.get(id=id)})

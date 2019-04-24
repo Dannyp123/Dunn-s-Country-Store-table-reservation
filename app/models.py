@@ -19,4 +19,4 @@ class TableReservation(models.Model):
             p_number=p_number,
             num_of_people=num_of_people,
             date=date,
-            time=time)
+            time=time).save()

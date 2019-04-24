@@ -16,6 +16,10 @@
     margin-bottom: 14px;
 }
 
+.card {
+    margin-top: 16px !important
+}
+
 .pb {
     padding-bottom: 24px;
 }
@@ -53,9 +57,13 @@
     height: 425px;
 }
 
-/* .card{
-    height: 435px !important;
-} */
+.d-flex {
+    display: flex;
+}
+
+.mr-3 {
+    margin-right: 16px;
+}
 
 .mt-3 {
     margin-top: 14px;

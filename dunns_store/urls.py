@@ -24,5 +24,10 @@ urlpatterns = [
         name="hunting-fishing"),
     path("beer-tobacco", views.BeerTobacco.as_view(), name="beer-tobacco"),
     path("menu", views.Menu.as_view(), name="menu"),
-    path("reservation", views.MakeReservation.as_view(), name="reservation")
+    path("reservation", views.MakeReservation.as_view(), name="reservation"),
+    path("reserved-tables", views.ReservedTables.as_view(), name="reserved"),
+    path(
+        "reserved-table/<id>",
+        views.ReservedTable.as_view(),
+        name="reserved-table")
 ]
