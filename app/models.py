@@ -9,14 +9,15 @@ class TableReservation(models.Model):
     num_of_people = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
+    email = models.EmailField()
 
     @staticmethod
     def submit_reservation(f_name, l_name, p_number, num_of_people, date,
-                           time):
+                           time, email):
         TableReservation(
             f_name=f_name,
             l_name=l_name,
             p_number=p_number,
             num_of_people=num_of_people,
             date=date,
-            time=time).save()
+            time=time, email = email).save()

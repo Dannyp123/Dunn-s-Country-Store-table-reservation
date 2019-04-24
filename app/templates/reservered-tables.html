@@ -26,12 +26,8 @@
 
     <div class="card">
         <div class="card-content">
-            <form action="{% url 'home' %}">
-                <button class="btn waves-effect blue darken-3 second">Go Home</button>
-            </form>
-            <span class="card-title">Current Reserved tables</span>
+            <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name}} {{ table.l_name }}</a>
             <hr>
-            <a href="{% url 'reserved-table' table.id%}">{{ table.f_name}} {{ table.l_name }}</a>
         </div>
     </div>
 </div>

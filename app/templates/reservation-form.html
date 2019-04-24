@@ -26,51 +26,61 @@
   <div class="card">
     <div class="card-content">
       <span class="card-title center-align">Table Reservation</span>
-      <p class="center-align">Table availability subject to change</p>
+      <b>
+        <p class="center-align">*Table availability is subject to change*</p>
+      </b>
+      <p class="center-align">Must have table reserved before 7: 15 P.M. C.T.</p>
       <hr />
       <form action="" method="POST">
         {% csrf_token %}
         <div class="row">
           <div class="input-field col l6 s12">
-            <input id="first_name" type="text" name="f_name" class="validate" />
+            <input id="first_name" type="text" name="f_name" class="validate text-black" />
             {{ reservation_form.f_name.errors }}
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col l6 s12">
-            <input id="last_name" type="text" name="l_name" class="validate" />
+            <input id="last_name" type="text" name="l_name" class="validate text-black" />
             {{ reservation_form.l_name.errors }}
             <label for="last_name">Last Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col l6 s12">
-            <input id="p_number" type="text" name="p_number" class="validate" />
+            <input id="p_number" type="text" name="p_number" class="validate text-black" />
             {{ reservation_form.p_number.errors }}
             <label for="p_number">Phone Number</label>
           </div>
           <div class="input-field col l6 s12">
-            <input id="num_of_people" type="text" name="num_of_people" class="validate" />
+            <input id="num_of_people" type="text" name="num_of_people" class="validate text-black" />
             {{ reservation_form.num_of_people.errors }}
             <label for="num_of_people">Number of seats needed</label>
           </div>
         </div>
         <div class="row">
           <div class="date-field col l6 s12">
-            <input id="date" type="date" name="date" class="validate" />
+            <input id="date" type="date" name="date" class="validate text-black" />
             {{ reservation_form.date.errors }}
             <label for="date">Date</label>
           </div>
           <div class="date-field col l6 s12">
-            <input id="time" type="text" name="time" class="validate" />
+            <input id="time" type="time" name="time" value="12:00:00" class="validate text-black" />
             {{ reservation_form.time.errors }}
             <label for="time">Time</label>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col l12 212">
+            <input id="email" type="email" name="email" class="validate text-black" />
+            {{ reservation_form.email.errors }}
+            <label for="email">Email</label>
+          </div>
+        </div>
         <div class="d-flex">
-          <button class="btn waves-effect waves-light blue darken-4 mr-3" type="submit">Submit</button>
+          <button class="btn waves-effect waves-light mr-3 green darken-3" type="submit">Submit</button>
       </form>
       <form action="{% url 'home' %}">
-        <button class="btn waves-effect waves-light green darken2">Back</button>
+        <button class="btn waves-effect waves-light blue darken-4">Back</button>
       </form>
     </div>
   </div>

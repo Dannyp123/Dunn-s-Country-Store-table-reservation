@@ -8,3 +8,4 @@ class TableReservationForm(forms.Form):
     num_of_people = forms.IntegerField()
     date = forms.DateField()
     time = forms.TimeField()
+    email = forms.EmailField()

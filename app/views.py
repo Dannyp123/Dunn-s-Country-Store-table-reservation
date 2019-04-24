@@ -41,9 +41,10 @@ class MakeReservation(View):
             num_of_people = form.cleaned_data["num_of_people"]
             date = form.cleaned_data["date"]
             time = form.cleaned_data["time"]
+            email = form.cleaned_data["email"]
 
             models.TableReservation.submit_reservation(
-                f_name, l_name, p_number, num_of_people, date, time)
+                f_name, l_name, p_number, num_of_people, date, time, email)
 
             return redirect("home")
 
