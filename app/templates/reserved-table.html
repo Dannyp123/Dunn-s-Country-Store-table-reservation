@@ -1,24 +1,71 @@
 {% extends 'base.html' %} {% block body %}
-<!-- <title>Dunn's Country Store | Reserved Tables</title> -->
+<title>Dunn's Country Store | {{ reserved_table.f_name }} {{ reserved_table.l_name }}' s table</title>
 <div class="navbar-fixed">
-        <nav class="z-depth-3">
-            <div class="nav-wrapper blue darken-4">
-                <span class="space-header">Dunn's Country Store</span>
-                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'menu' %}">Menu</a></li>
-                    <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
-                    <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
-                </ul>
+    <nav class="z-depth-3">
+        <div class="nav-wrapper blue darken-4">
+            <span class="space-header">Dunn's Country Store</span>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+                <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
+    <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+    <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+</ul>
+<div class="container">
+    <div class="row">
+        <div class="col l12 s12">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title center-align"> {{ reserved_table.f_name }}
+                        {{ reserved_table.l_name }}</span>
+                    <div class="left-align">
+                        <form action="{% url 'reserved' %}">
+                            <button class="btn blue darken-3 waves-effect">Back</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <u>
+                                <p class="header center-align">Phone Number</p>
+                            </u>
+                            <div class="second">
+                                <p class="center-align">{{ reserved_table.p_number }}</p>
+                            </div>
+                            <u>
+                                <p class="header center-align">Number of seats</p>
+                            </u>
+                            <p class="center-align">{{ reserved_table.num_of_people }}</p>
+                        </div>
+                        <div class="col l6 s12">
+                            <u>
+                                <p class="header center-align">Date</p>
+                            </u>
+                            <div class="second">
+                                <p class="center-align">{{ reserved_table.date }}</p>
+                            </div>
+                            <u>
+                                <p class="header center-align">Time</p>
+                            </u>
+                            <p class="center-align">{{ reserved_table.time }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center-align">
+                            <button class="btn green darken-3 waves-effect">Email</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
-    
-    <ul class="sidenav" id="mobile-nav">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'menu' %}">Menu</a></li>
-        <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
-        <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
-    </ul>
-{% endblock body %}
+        </div>
+        {% endblock body %}

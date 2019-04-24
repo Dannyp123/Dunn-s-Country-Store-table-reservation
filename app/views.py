@@ -66,5 +66,6 @@ class ReservedTables(View):
 
 class ReservedTable(View):
     def get(self, request, id):
-        return render(request, "reserved-table.html",
-                      {"reserved_table": models.TableReservation.get(id=id)})
+        return render(
+            request, "reserved-table.html",
+            {"reserved_table": models.TableReservation.objects.get(id=id)})
