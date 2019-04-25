@@ -49,12 +49,12 @@
         </div>
         <div class="row">
           <div class="input-field col l6 s12">
-            <input id="p_number" type="tel" name="p_number" placeholder="(123) 345-6789" class="validate text-black" />
+            <input id="p_number" type="tel" name="p_number" placeholder="1233456789" class="validate text-black" />
             {{ reservation_form.p_number.errors }}
             <label for="p_number">Phone Number</label>
           </div>
           <div class="input-field col l6 s12">
-            <input id="num_of_people" type="text" name="num_of_people" class="validate text-black" />
+            <input id="num_of_people" type="number" name="num_of_people" class="validate text-black" />
             {{ reservation_form.num_of_people.errors }}
             <label for="num_of_people">Number of seats needed</label>
           </div>

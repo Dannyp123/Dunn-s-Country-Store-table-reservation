@@ -7,7 +7,9 @@ class TableReservation(models.Model):
     f_name = models.TextField()
     l_name = models.TextField()
     phone_regex = RegexValidator(
-        regex=r'^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$')
+        regex=
+        r'^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$'
+    )
     p_number = models.CharField(validators=[phone_regex], max_length=10)
     num_of_people = models.IntegerField()
     date = models.DateField()

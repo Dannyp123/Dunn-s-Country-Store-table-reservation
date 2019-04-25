@@ -3,22 +3,22 @@
 <div class="navbar-fixed">
     <nav class="z-depth-3">
         <div class="nav-wrapper blue darken-4">
-            <span class="space-header">Dunn's Country Store</span>
+            <span class="space-header">Dunn's Admin Home</span>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{% url 'user-home' %}">User</a></li>
-                <li><a href="{% url 'menu' %}">Menu</a></li>
                 <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
                 <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'user-home' %}">User</a></li>
             </ul>
         </div>
     </nav>
 </div>
 
 <ul class="sidenav" id="mobile-nav">
-    <li><a href="{% url 'menu' %}">Menu</a></li>
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
     <li><a href="{% url 'user-home' %}">User</a></li>
 </ul>
 <div class="col s12 m8 l12">
@@ -57,9 +57,13 @@
                         </p>
                     </div>
                     <div class="center-align spacer">
+                        {% if admin_home|length == 0 %}
+                        <p class="flow-text center-align red-text darken-3">No new reserved tables</p>
+                        {% else %}
                         <form action="{% url 'reserved' %}">
                             <button class="btn blue darken-3 waves-effect">Reserved Tables</button>
                         </form>
+                        {% endif %}
                     </div>
                 </div>
             </div>

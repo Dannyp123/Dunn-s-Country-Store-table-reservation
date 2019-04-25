@@ -24,13 +24,22 @@
 <div class="col s12 m8 l12">
     <img id="headerImg" class="responsive-img" src="/static/images/store.jpg" alt="Dunn's Country Store">
 </div>
+
 {% for table in reserved %}
 <div class="container">
+
     <div class="card">
         <div class="card-content">
-            <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name }} {{ table.l_name }}</a>
-            <p>Table for: {{ table.num_of_people }}</p>
-            <hr />
+            <div>
+                {% if reserved|length == 0 %}
+                <p class="flow-text center-align red-text darken-3">No new reserved tables</p>
+                {% else %}
+                <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name }}
+                    {{ table.l_name }}</a>
+                <p>Table for: {{ table.num_of_people }}</p>
+                {% endif %}
+                <hr />
+            </div>
         </div>
     </div>
 </div>

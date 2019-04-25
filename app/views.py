@@ -9,7 +9,8 @@ from app.data import BREAKFAST
 # Create your views here.
 class AdminHome(View):
     def get(self, request):
-        return render(request, "admin-home.html")
+        return render(request, "admin-home.html",
+                      {"admin_home": models.TableReservation.objects.all()})
 
 
 class HuntingFishing(View):
