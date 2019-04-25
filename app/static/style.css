@@ -136,6 +136,10 @@ input:-ms-input-placeholder {
         height: 425px;
     }
 
+    .tableCard {
+        height: 225px;
+    }
+
     .bigChickCard {
         height: 450px;
     }
@@ -236,6 +240,10 @@ input:-ms-input-placeholder {
         height: 700px;
     }
 
+    .tableCard {
+        height: 250px;
+    }
+
     .omeletImgs {
         position: relative;
         left: 95px;
@@ -332,6 +340,10 @@ input:-ms-input-placeholder {
 
     .menuCard {
         height: 460px;
+    }
+
+    .tableCard {
+        height: 250px;
     }
 
     .burgerCard {
