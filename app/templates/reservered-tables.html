@@ -21,16 +21,17 @@
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
 </ul>
+<div class="col s12 m8 l12">
+    <img id="headerImg" class="responsive-img" src="/static/images/store.jpg" alt="Dunn's Country Store">
+</div>
 {% for table in reserved %}
 <div class="container">
-
     <div class="card">
         <div class="card-content">
-            <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name}} {{ table.l_name }}</a>
-            Table for: <p class="header">{{ table.num_of_people }}</p>
-            <hr>
+            <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name }} {{ table.l_name }}</a>
+            <p>Table for: {{ table.num_of_people }}</p>
+            <hr />
         </div>
     </div>
 </div>
-{% endfor %}
-{% endblock body %}
+{% endfor %} {% endblock body %}
