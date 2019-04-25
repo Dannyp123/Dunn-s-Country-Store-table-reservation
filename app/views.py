@@ -7,9 +7,9 @@ from app.data import BREAKFAST
 
 
 # Create your views here.
-class HomePage(View):
+class AdminHome(View):
     def get(self, request):
-        return render(request, "home.html")
+        return render(request, "admin-home.html")
 
 
 class HuntingFishing(View):
@@ -46,7 +46,7 @@ class MakeReservation(View):
             models.TableReservation.submit_reservation(
                 f_name, l_name, p_number, num_of_people, date, time, email)
 
-            return redirect("home")
+            return redirect("user-home")
 
         else:
             return render(request, "reservation-form.html",
@@ -70,3 +70,11 @@ class ReservedTable(View):
         return render(
             request, "reserved-table.html",
             {"reserved_table": models.TableReservation.objects.get(id=id)})
+
+
+class UserHome(View):
+    def get(self, request):
+        return render(
+            request,
+            "user-home.html",
+        )
