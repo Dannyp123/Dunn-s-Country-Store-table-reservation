@@ -4,6 +4,8 @@ from app import forms
 from app import models
 from django.shortcuts import redirect, render
 from app.data import BREAKFAST
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -77,3 +79,15 @@ class UserHome(View):
     def get(self, request):
         return render(request, "user-home.html",
                       {"user": models.TableReservation.objects.all()})
+
+
+def register(request):
+    if request.method == "POST":
+        form = UserCreationForm(data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get("username")
+            messages.success(request, f'Account created for: {username}')
+            return redirect("user-home")
+    else:
+        form = UserCreationForm()
+    return render(request, "register.html", {"form": form})

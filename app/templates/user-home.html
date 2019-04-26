@@ -31,6 +31,13 @@
 </div>
 <div class="container">
     <div class="row spacer">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="center-align blue darken-3 br p-2">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="col l4 s12">
             <div class="card hourCard">
                 <div class="card-content">

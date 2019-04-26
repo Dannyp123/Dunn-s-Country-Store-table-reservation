@@ -61,6 +61,14 @@ input:-ms-input-placeholder {
     font-size: 16pt
 }
 
+.br {
+    border-radius: 4px
+}
+
+.p-2 {
+    padding: 16px;
+}
+
 .bold-text {
     font-weight: bold;
 }
