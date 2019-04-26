@@ -9,7 +9,6 @@
                 <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
                 <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
                 <li><a href="{% url 'menu' %}">Menu</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
                 <li><a href="{% url 'user-home' %}">User</a></li>
             </ul>
         </div>
@@ -20,7 +19,6 @@
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
     <li><a href="{% url 'menu' %}">Menu</a></li>
-    <li><a href="{% url 'register' %}">Register</a></li>
     <li><a href="{% url 'user-home' %}">User</a></li>
 </ul>
 <div class="col s12 m8 l12">
@@ -28,6 +26,13 @@
 </div>
 <div class="container">
     <div class="row spacer">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="center-align blue darken-3 br p-2">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="col l12 s12">
             <div class="card tableCard">
                 <div class="card-content">

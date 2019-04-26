@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block body %}
+<title>Dunn's Country Store | {{ user.username }}'s profile</title>
+<div class="navbar-fixed">
+    <nav class="z-depth-3">
+        <div class="nav-wrapper blue darken-4">
+            <span class="space-header">{{ user.username }}'s profile</span>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'admin-home' %}">Admin</a></li>
+                <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+                <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'logout' %}">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="{% url 'admin-home' %}">Admin</a></li>
+    <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
+    <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
+    <li><a href="{% url 'logout' %}">Log out</a></li>
+
+</ul>
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <u><span class="card-title center-align">Username </span></u>
+            <p class="center-align">{{ user.username }}</p>
+        </div>
+    </div>
+</div>
+{% endblock body %}

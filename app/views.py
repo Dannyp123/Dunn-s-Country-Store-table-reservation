@@ -6,6 +6,7 @@ from django.shortcuts import redirect, render
 from app.data import BREAKFAST
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -78,16 +79,22 @@ class ReservedTable(View):
 class UserHome(View):
     def get(self, request):
         return render(request, "user-home.html",
-                      {"user": models.TableReservation.objects.all()})
+                      {"user_admin": models.TableReservation.objects.all()})
 
 
 def register(request):
     if request.method == "POST":
         form = UserCreationForm(data=request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data.get("username")
-            messages.success(request, f'Account created for: {username}')
-            return redirect("user-home")
+            messages.success(
+                request, f"Your account has been created. You can now login")
+            return redirect("login")
     else:
         form = UserCreationForm()
     return render(request, "register.html", {"form": form})
+
+@login_required
+def profile(request):
+    return render(request, "profile.html")
