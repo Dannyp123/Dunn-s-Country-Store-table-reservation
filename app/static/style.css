@@ -40,6 +40,10 @@ input:-ms-input-placeholder {
     padding-bottom: 24px;
 }
 
+.d-none {
+    display: none;
+}
+
 .spacer {
     margin-top: 14px;
 }
@@ -357,10 +361,6 @@ input:-ms-input-placeholder {
 
     .bbqCard {
         height: 645px;
-    }
-
-    .chickCard {
-        height: 545px;
     }
 
     .bigChickCard {

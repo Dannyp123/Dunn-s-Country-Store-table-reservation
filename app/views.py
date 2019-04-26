@@ -75,7 +75,5 @@ class ReservedTable(View):
 
 class UserHome(View):
     def get(self, request):
-        return render(
-            request,
-            "user-home.html",
-        )
+        return render(request, "user-home.html",
+                      {"user": models.TableReservation.objects.all()})
