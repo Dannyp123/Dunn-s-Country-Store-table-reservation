@@ -7,7 +7,7 @@
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}">My profile</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'logout' %}">Log out</a></li>
                 {% else %}
                 <li><a href="{% url 'register' %}">Register</a></li>
@@ -23,6 +23,13 @@
 
 <ul class="sidenav" id="mobile-nav">
     <li><a href="{% url 'admin-home' %}">Admin</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'profile' %}">Profile</a></li>
+    <li><a href="{% url 'logout' %}">Log out</a></li>
+    {% else %}
+    <li><a href="{% url 'register' %}">Register</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
     <li><a href="{% url 'menu' %}">Menu</a></li>

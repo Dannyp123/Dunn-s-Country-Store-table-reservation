@@ -3,7 +3,7 @@
 <div class="navbar-fixed">
     <nav class="z-depth-3">
         <div class="nav-wrapper blue darken-4">
-            <span class="space-header">Dunn's Country Store</span>
+            <span class="space-header">Dunn's | Login</span>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{% url 'user-home'%}">Home</a></li>
@@ -17,10 +17,12 @@
 
 </ul>
 <div class="container">
-    {% if messages %}
-    {% for message in messages %}
-    <div class="center-align blue darken-3 br p-2">
-        {{ message }}
+    <div class="spacer">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="center-align blue darken-3 br p-2">
+            {{ message }}
+        </div>
     </div>
     {% endfor %}
     {% endif %}
