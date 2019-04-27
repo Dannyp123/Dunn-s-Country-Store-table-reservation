@@ -4,9 +4,10 @@ from app import forms
 from app import models
 from django.shortcuts import redirect, render
 from app.data import BREAKFAST
-from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .forms import UserResisterForm
 
 
 # Create your views here.
@@ -84,7 +85,7 @@ class UserHome(View):
 
 def register(request):
     if request.method == "POST":
-        form = UserCreationForm(data=request.POST)
+        form = UserResisterForm(data=request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get("username")
@@ -92,7 +93,7 @@ def register(request):
                 request, f"Your account has been created. You can now login")
             return redirect("login")
     else:
-        form = UserCreationForm()
+        form = UserResisterForm()
     return render(request, "register.html", {"form": form})
 
 @login_required
