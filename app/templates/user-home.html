@@ -77,8 +77,10 @@
                             6:00 AM - 7:00 PM
                         </p>
                     </div>
+                    <hr>
                     <div class="mt-3 center-align">
-                        {% if user.is_authenticated %}
+                        <u><span class="card-title">Table Reservation</span></u>
+                        {% if user.is_staff %}
                         <form action="{% url 'reservation' %}">
                             <button type="submit" class="btn waves-effect waves-light blue darken-3"><i
                                     class="fas fa-plus"></i> Make a Reservation</button>

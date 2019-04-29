@@ -9,7 +9,7 @@
                 <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
                 <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
                 <li><a href="{% url 'menu' %}">Menu</a></li>
-                <li><a href="{% url 'user-home' %}">User</a></li>
+                <li><a href="{% url 'user-home' %}">Back</a></li>
             </ul>
         </div>
     </nav>
@@ -19,7 +19,7 @@
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
     <li><a href="{% url 'menu' %}">Menu</a></li>
-    <li><a href="{% url 'user-home' %}">User</a></li>
+    <li><a href="{% url 'user-home' %}">Back</a></li>
 </ul>
 <div class="col s12 m8 l12">
     <img id="headerImg" class="responsive-img" src="/static/images/store-front(new).jpg" alt="Dunn's Country Store">
@@ -43,10 +43,15 @@
                         {% if admin_home|length == 0 %}
                         <p class="flow-text center-align red-text darken-3">No new reserved tables</p>
                         {% else %}
-                        <form action="{% url 'reserved' %}">
-                            <button class="btn blue darken-3 waves-effect">Reserved Tables</button>
-                        </form>
-                        {% endif %}
+                        <div class="d-flex">
+                            <form action="{% url 'reserved' %}">
+                                <button class="btn blue darken-3 waves-effect mr-3">Reserved Tables</button>
+                            </form>
+                            {% endif %}
+                            <form action="{% url 'user-home' %}">
+                                <button class="btn waves-effect green darken-3">Back</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

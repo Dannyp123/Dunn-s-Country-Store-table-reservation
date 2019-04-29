@@ -96,6 +96,7 @@ def register(request):
         form = UserResisterForm()
     return render(request, "register.html", {"form": form})
 
+
 @login_required
 def profile(request):
     return render(request, "profile.html")

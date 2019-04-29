@@ -33,8 +33,26 @@
 <div class="container">
     <div class="card">
         <div class="card-content">
-            <u><span class="card-title center-align">Username </span></u>
-            <p class="center-align">{{ user.username }}</p>
+            <div class="row">
+                <div class="col l6 s12">
+                    <u><span class="card-title center-align">Username </span></u>
+                    <p class="center-align">{{ user.username }}</p>
+                </div>
+                <div class="col l6 s12">
+                    {% if user.email|length == 0 %}
+                    <u><span class="card-title center-align">Email</span></u>
+                    <p class="red-text darken-3 center-align">No email on file</p>
+                    {% else %}
+                    <u><span class="card-title center-align">Email</span></u>
+                    <p class="center-align">{{ user.email }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="center-align">
+                <form action="{% url 'user-home' %}">
+                    <button class="btn waves-effect green darken-3">Back</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
