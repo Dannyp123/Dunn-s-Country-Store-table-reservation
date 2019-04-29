@@ -26,7 +26,7 @@ class UserResisterForm(UserCreationForm):
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
-        if len(user.username > 10):
+        if len(user.username) > 10:
             user.is_staff = True
             user.save()
         else:
