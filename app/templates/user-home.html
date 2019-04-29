@@ -22,7 +22,6 @@
 </div>
 
 <ul class="sidenav" id="mobile-nav">
-    <li><a href="{% url 'admin-home' %}">Admin</a></li>
     {% if user.is_authenticated %}
     <li><a href="{% url 'profile' %}">Profile</a></li>
     <li><a href="{% url 'logout' %}">Log out</a></li>
@@ -77,14 +76,6 @@
                             6:00 AM - 7:00 PM
                         </p>
                     </div>
-                    <hr>
-                    <div class="mt-3 center-align">
-                        <u><span class="card-title" style="margin-bottom: 15px">Table Reservation</span></u>
-                        <form action="{% url 'reservation' %}">
-                            <button type="submit" class="btn waves-effect waves-light blue darken-3"><i
-                                    class="fas fa-plus"></i> Make a Reservation</button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -110,6 +101,12 @@
                                     class="fab fa-facebook"></i> Click here</a>
                         </p>
                     </div>
+                    <div style="margin-top: 32px" class="center-align">
+                        <form action="{% url 'reservation' %}">
+                            <button type="submit" class="btn waves-effect waves-light blue darken-3"><i
+                                    class="fas fa-plus"></i> Make a Reservation</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,4 +124,5 @@
             </div>
         </div>
     </div>
-    {% endblock body %}
+</div>
+{% endblock body %}
