@@ -10,7 +10,7 @@
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'logout' %}">Log out</a></li>
                 {% else %}
-                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'register' %}">Sign Up</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
                 {% endif %}
                 <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
@@ -27,7 +27,7 @@
     <li><a href="{% url 'profile' %}">Profile</a></li>
     <li><a href="{% url 'logout' %}">Log out</a></li>
     {% else %}
-    <li><a href="{% url 'register' %}">Register</a></li>
+    <li><a href="{% url 'register' %}">Sign Up</a></li>
     <li><a href="{% url 'login' %}">Login</a></li>
     {% endif %}
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
@@ -43,7 +43,7 @@
         {% if messages %}
         {% for message in messages %}
         <div class="center-align blue darken-3 br p-2">
-            {{ message }}
+            <span class="white-text">{{ message }}</span>
         </div>
         {% endfor %}
         {% endif %}
@@ -79,15 +79,11 @@
                     </div>
                     <hr>
                     <div class="mt-3 center-align">
-                        <u><span class="card-title">Table Reservation</span></u>
-                        {% if user.is_staff %}
+                        <u><span class="card-title" style="margin-bottom: 15px">Table Reservation</span></u>
                         <form action="{% url 'reservation' %}">
                             <button type="submit" class="btn waves-effect waves-light blue darken-3"><i
                                     class="fas fa-plus"></i> Make a Reservation</button>
                         </form>
-                        {% else %}
-                        <p class="center-align green-text">Must be logged in to reserve table</p>
-                        {% endif %}
                     </div>
                 </div>
             </div>

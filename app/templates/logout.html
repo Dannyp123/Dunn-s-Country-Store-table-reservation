@@ -23,8 +23,10 @@
         <div class="card-content">
             <p class="flow-text">You have been logged out </p>
             <div class="spacer">
-                <a class="center-align" href="{% url 'login'%}">Log in again</a></p>
-                <a class="center-align" href="{% url 'user-home'%}">Home</a></p>
+                <div class="d-flex">
+                    <a class="left-align mr-3" href="{% url 'login'%}">Log in again</a></p>
+                    <a href="{% url 'user-home'%}">Home</a></p>
+                </div>
             </div>
         </div>
 

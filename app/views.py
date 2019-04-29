@@ -51,6 +51,11 @@ class MakeReservation(View):
             models.TableReservation.submit_reservation(
                 f_name, l_name, p_number, num_of_people, date, time, email)
 
+            messages.success(
+                request,
+                f"Thank you for reserving a table!  We will email you when your table is ready."
+            )
+
             return redirect("user-home")
 
         else:

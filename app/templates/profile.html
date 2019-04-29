@@ -6,7 +6,7 @@
             <span class="space-header">{{ user.username }}'s profile</span>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                {% if user.username|length > 10 %}
+                {% if user.is_staff %}
                 <li><a href="{% url 'admin-home' %}">Admin</a></li>
                 {% else %}
                 <li><a class="d-none" href="{% url 'admin-home' %}">Admin</a></li>
@@ -22,7 +22,11 @@
 </div>
 
 <ul class="sidenav" id="mobile-nav">
+    {% if user.is_staff %}
     <li><a href="{% url 'admin-home' %}">Admin</a></li>
+    {% else %}
+    <li><a class="d-none" href="{% url 'admin-home' %}">Admin</a></li>
+    {% endif %}
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'user-home' %}">Back</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
