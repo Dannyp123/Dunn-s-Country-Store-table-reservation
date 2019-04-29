@@ -31,7 +31,8 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth',
     'django.contrib.contenttypes', 'django.contrib.sessions',
-    'django.contrib.messages', 'django.contrib.staticfiles', 'app'
+    'django.contrib.messages', 'django.contrib.staticfiles', 'app',
+    "crispy_forms", "crispy_forms_materialize"
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = "user-home"
 LOGIN_URL = "login"
+
+CRISPY_TEMPLATE_PACK = "materialize_css_forms"
