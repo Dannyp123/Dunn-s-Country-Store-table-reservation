@@ -10,7 +10,7 @@
                 <li><a href="{% url 'reserved' %}">Reservations</a></li>
                 {% else %}
                 <!-- d-none is a class that has display:none -->
-                <li><a class="d-none" href="{% url 'admin-home' %}">Reservations</a></li>
+                <li><a class="d-none" href="{% url 'home' %}">Reservations</a></li>
                 {% endif %}
                 <li><a href="{% url 'home' %}">Back</a></li>
                 <li><a href="{% url 'logout' %}">Log out</a></li>

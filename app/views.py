@@ -50,7 +50,7 @@ class MakeReservation(View):
                 f"Thank you for reserving a table!  We will email you when your table is ready."
             )
 
-            return redirect("user-home")
+            return redirect("home")
 
         else:
             return render(request, "reservation-form.html",

@@ -114,7 +114,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = "user-home"
+LOGIN_REDIRECT_URL = "home"
 LOGIN_URL = "login"
 
 CRISPY_TEMPLATE_PACK = "materialize_css_forms"
