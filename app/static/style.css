@@ -23,6 +23,10 @@ input:-ms-input-placeholder {
     font-size: 32pt;
 }
 
+input {
+    color: black;
+}
+
 .first {
     margin-top: 10px;
     margin-bottom: 16px;
