@@ -7,12 +7,12 @@
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 {% if user.is_staff %}
-                <li><a href="{% url 'admin-home' %}">Reservations</a></li>
+                <li><a href="{% url 'reserved' %}">Reservations</a></li>
                 {% else %}
                 <!-- d-none is a class that has display:none -->
                 <li><a class="d-none" href="{% url 'admin-home' %}">Reservations</a></li>
                 {% endif %}
-                <li><a href="{% url 'user-home' %}">Back</a></li>
+                <li><a href="{% url 'home' %}">Back</a></li>
                 <li><a href="{% url 'logout' %}">Log out</a></li>
             </ul>
         </div>
@@ -21,12 +21,12 @@
 
 <ul class="sidenav" id="mobile-nav">
     {% if user.is_staff %}
-    <li><a href="{% url 'admin-home' %}">Reservations</a></li>
+    <li><a href="{% url 'reserved' %}">Reservations</a></li>
     {% else %}
     <!-- d-none is a class that has display:none -->
-    <li><a class="d-none" href="{% url 'admin-home' %}">Reservations</a></li>
+    <li><a class="d-none" href="{% url 'reserved' %}">Reservations</a></li>
     {% endif %}
-    <li><a href="{% url 'user-home' %}">Back</a></li>
+    <li><a href="{% url 'home' %}">Back</a></li>
     <li><a href="{% url 'logout' %}">Log out</a></li>
 
 </ul>
@@ -34,6 +34,13 @@
     <div class="card">
         <div class="card-content">
             <div class="row">
+                {% if messages %}
+                {% for message in messages %}
+                <div class="center-align blue darken-3 br p-2">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
                 <div class="col l6 s12">
                     <u><span class="card-title center-align">Username </span></u>
                     <p class="center-align">{{ user.username }}</p>
@@ -48,10 +55,19 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="center-align">
-                <form action="{% url 'user-home' %}">
-                    <button class="btn waves-effect green darken-3">Back</button>
-                </form>
+            <div class="row">
+                <div class="center-align">
+                    <form action="{% url 'home' %}">
+                        <button class="btn waves-effect green darken-3" style="margin-bottom: 14px">Back</button>
+                    </form>
+                    <form action="{% url 'reserved' %}">
+                        {% if profile|length == 0 %}
+                        <p class="flow-text center-align red-text darken-3">No new reserved tables</p>
+                        {% else %}
+                        <button class="btn waves-effect blue darken-3">Reserved Tables</button>
+                        {% endif %}
+                    </form>
+                </div>
             </div>
         </div>
     </div>

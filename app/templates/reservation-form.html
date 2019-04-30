@@ -6,7 +6,7 @@
       <span class="space-header">Dunn's Country Store</span>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{% url 'user-home' %}">Home</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'menu' %}">Menu</a></li>
         <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
         <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
@@ -16,7 +16,7 @@
 </div>
 
 <ul class="sidenav" id="mobile-nav">
-  <li><a href="{% url 'user-home' %}">Home</a></li>
+  <li><a href="{% url 'home' %}">Home</a></li>
   <li><a href="{% url 'menu' %}">Menu</a></li>
   <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
   <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
@@ -79,7 +79,7 @@
         <div class="d-flex">
           <button class="btn waves-effect waves-light mr-3 green darken-3" type="submit">Submit</button>
       </form>
-      <form action="{% url 'user-home' %}">
+      <form action="{% url 'home' %}">
         <button class="btn waves-effect waves-light blue darken-4">Back</button>
       </form>
     </div>

@@ -8,7 +8,7 @@
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Sign In</a></li>
-                <li><a href="{% url 'user-home'%}">Home</a></li>
+                <li><a href="{% url 'home'%}">Home</a></li>
 
             </ul>
         </div>
@@ -17,7 +17,7 @@
 
 <ul class="sidenav" id="mobile-nav">
     <li><a href="#">Sign In</a></li>
-    <li><a href="{% url 'user-home'%}">Home</a></li>
+    <li><a href="{% url 'home'%}">Home</a></li>
 </ul>
 <div class="container">
     <form method="POST">
@@ -35,7 +35,7 @@
                     <button class="btn waves-effect green darken-3 mr-3" type="submit">Sign Up</button>
 
     </form>
-    <form action="{% url 'user-home' %}">
+    <form action="{% url 'home' %}">
         <button type="submit" class="btn waves-effect blue darken-3 ">Back</button>
     </form>
 </div>

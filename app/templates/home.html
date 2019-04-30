@@ -9,11 +9,11 @@
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'logout' %}">Log out</a></li>
-                <li><a class="dropdown-trigger d-none" href="#!" data-target="dropdown1">Create account<i
+                <li><a class="dropdown-trigger d-none" href="#!" data-target="dropdown1">Create an account<i
                             class="material-icons right">arrow_drop_down</i></a></li>
                 {% else %}
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Create account<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Create an account<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
                 {% endif %}
                 <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
                 <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>
@@ -25,7 +25,7 @@
 
 <ul id="dropdown1" class="dropdown-content">
     <li><a href="{% url 'register' %}">Sign Up</a></li>
-    <li><a href="{% url 'login' %}">Login</a></li>
+    <li><a href="{% url 'login' %}">Sign In</a></li>
 </ul>
 
 
@@ -35,7 +35,7 @@
     <li><a href="{% url 'logout' %}">Log out</a></li>
     {% else %}
     <li><a href="{% url 'register' %}">Sign Up</a></li>
-    <li><a href="{% url 'login' %}">Login</a></li>
+    <li><a href="{% url 'login' %}">Sign In</a></li>
     {% endif %}
     <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
     <li><a href="{% url 'hunting-fishing' %}">Hunting/Fishing</a></li>

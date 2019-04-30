@@ -10,13 +10,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserResisterForm
 
 
-# Create your views here.
-class AdminHome(View):
-    def get(self, request):
-        return render(request, "admin-home.html",
-                      {"admin_home": models.TableReservation.objects.all()})
-
-
+# Create your views here
 class HuntingFishing(View):
     def get(self, request):
         return render(request, "hunting-fishing.html")
@@ -82,9 +76,9 @@ class ReservedTable(View):
             {"reserved_table": models.TableReservation.objects.get(id=id)})
 
 
-class UserHome(View):
+class Home(View):
     def get(self, request):
-        return render(request, "user-home.html",
+        return render(request, "home.html",
                       {"user_admin": models.TableReservation.objects.all()})
 
 
@@ -104,4 +98,5 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, "profile.html")
+    return render(request, "profile.html",
+                  {"profile": models.TableReservation.objects.all()})
