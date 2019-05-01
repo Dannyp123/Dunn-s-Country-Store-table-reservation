@@ -8,6 +8,9 @@ from app.data import BREAKFAST
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserResisterForm
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 
 # Create your views here
@@ -74,6 +77,28 @@ class ReservedTable(View):
         return render(
             request, "reserved-table.html",
             {"reserved_table": models.TableReservation.objects.get(id=id)})
+
+
+class Email(View):
+    def get(self, request):
+        form = forms.TableReservationForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            email = form.cleaned_data.get("email")
+            message = Mail(
+                from_email="dpeterson@basecampcodingacademy.org",
+                to_emails=email,
+                subject="Table Confirmation - Dunn's Country Store",
+                html_content='<strong>Your table is ready</strong>')
+            try:
+                sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+                response = sg.send(message)
+                print(response.status_code)
+                print(response.body)
+                print(response.headers)
+            except Exception as e:
+                print(e.message)
+        return redirect("reserved")
 
 
 class Home(View):

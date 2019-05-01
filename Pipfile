@@ -12,6 +12,7 @@ django_heroku="*"
 gunicorn="*"
 crispy-forms-materialize = "*"
 django-crispy-forms = "*"
+sendgrid = "*"
 
 [requires]
 python_version = "3.6"

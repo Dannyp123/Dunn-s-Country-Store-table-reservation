@@ -40,5 +40,6 @@ urlpatterns = [
     path(
         "reserved-table/<id>",
         views.ReservedTable.as_view(),
-        name="reserved-table")
+        name="reserved-table"),
+    path("email", views.Email.as_view(), name="send_email")
 ]
