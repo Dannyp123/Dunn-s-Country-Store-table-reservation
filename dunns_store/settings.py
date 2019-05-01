@@ -123,3 +123,6 @@ LOGIN_REDIRECT_URL = "home"
 LOGIN_URL = "login"
 
 CRISPY_TEMPLATE_PACK = "materialize_css_forms"
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
