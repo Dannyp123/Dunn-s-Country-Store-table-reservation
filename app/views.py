@@ -80,24 +80,19 @@ class ReservedTable(View):
 
 
 class Email(View):
-    def get(self, request):
-        form = forms.TableReservationForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            email = form.cleaned_data.get("email")
-            message = Mail(
-                from_email="dpeterson@basecampcodingacademy.org",
-                to_emails=email,
-                subject="Table Confirmation - Dunn's Country Store",
-                html_content='<strong>Your table is ready</strong>')
-            try:
-                sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-                response = sg.send(message)
-                print(response.status_code)
-                print(response.body)
-                print(response.headers)
-            except Exception as e:
-                print(e.message)
+    def get(self, request, id):
+        reservation = models.TableReservation.objects.get(id=id)
+        message = Mail(
+            from_email="dpeterson@basecampcodingacademy.org",
+            to_emails=reservation.email,
+            subject="Table Confirmation - Dunn's Country Store",
+            html_content='<strong>Your table is ready</strong>')
+        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+        response = sg.send(message)
+        print(response.status_code)
+        print(response.body)
+        print(response.headers)
+        print(reservation.email)
         return redirect("reserved")
 
 
