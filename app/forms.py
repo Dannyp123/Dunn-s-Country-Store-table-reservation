@@ -16,7 +16,7 @@ class TableReservationForm(forms.Form):
     email = forms.EmailField()
 
 
-class UserResisterForm(UserCreationForm):
+class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 
     class Meta:
@@ -28,7 +28,7 @@ class UserResisterForm(UserCreationForm):
         user.set_password(self.cleaned_data["password1"])
         if len(user.username) > 10:
             user.is_staff = True
-            user.save()
         else:
             user.is_staff = False
+        user.save()        
         return user

@@ -9,10 +9,11 @@
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'logout' %}">Log out</a></li>
+                <!-- the class d-none is display:none -->
                 <li><a class="dropdown-trigger d-none" href="#!" data-target="dropdown1">Create an account<i
                             class="material-icons right">arrow_drop_down</i></a></li>
                 {% else %}
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Create an account<i
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i
                             class="material-icons right">arrow_drop_down</i></a></li>
                 {% endif %}
                 <li><a href="{% url 'beer-tobacco' %}">Beer/Tobacco</a></li>
@@ -24,8 +25,12 @@
 </div>
 
 <ul id="dropdown1" class="dropdown-content">
+    {% if user_admin|length == 0 %}
     <li><a href="{% url 'register' %}">Sign Up</a></li>
+    {% else %}
     <li><a href="{% url 'login' %}">Sign In</a></li>
+    <li><a href="{% url 'register' %}">Sign Up</a></li>
+    {% endif %}
 </ul>
 
 

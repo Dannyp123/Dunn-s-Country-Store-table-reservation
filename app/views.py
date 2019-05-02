@@ -8,7 +8,7 @@ from app.data import BREAKFAST
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import UserResisterForm
+from .forms import UserRegisterForm
 import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
@@ -86,7 +86,7 @@ class Email(View):
 
         reservation = models.TableReservation.objects.get(id=id)
         message = Mail(
-            from_email="dpeterson@basecampcodingacademy.org",
+            from_email=request.user.email,
             to_emails=reservation.email,
             subject="Table Confirmation - Dunn's Country Store",
             html_content=
@@ -111,7 +111,7 @@ class Home(View):
 
 def register(request):
     if request.method == "POST":
-        form = UserResisterForm(data=request.POST)
+        form = UserRegisterForm(data=request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get("username")
@@ -119,7 +119,7 @@ def register(request):
                 request, f"Your account has been created. You can now login")
             return redirect("login")
     else:
-        form = UserResisterForm()
+        form = UserRegisterForm()
     return render(request, "register.html", {"form": form})
 
 
