@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import random
 from django.views import View
 from app import forms
 from app import models
@@ -81,12 +82,16 @@ class ReservedTable(View):
 
 class Email(View):
     def get(self, request, id):
+        random_num = random.randint(1, 9)
+
         reservation = models.TableReservation.objects.get(id=id)
         message = Mail(
             from_email="dpeterson@basecampcodingacademy.org",
             to_emails=reservation.email,
             subject="Table Confirmation - Dunn's Country Store",
-            html_content='<strong>Your table is ready</strong>')
+            html_content=
+            'The table you reserved is ready. Your table number is: {}. Just have a seat and someone will be right with you. <strong>* Make sure you arrive before 7:15 CST.*</strong>'
+            .format(random_num))
         sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)
         print(response.status_code)
