@@ -18,12 +18,21 @@
 <div class="col s12 m8 l12">
     <img id="headerImg" class="responsive-img" src="/static/images/store.jpg" alt="Dunn's Country Store">
 </div>
-
+<div class="container">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="center-align blue darken-4 br p-2" style="margin-top: 16px;">
+        <span class="white-text" style="font-size: 16pt">{{ message }}</span>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
 {% for table in reserved %}
 <div class="container">
 
     <div class="card">
         <div class="card-content">
+
             <div>
                 {% if reserved|length == 0 %}
                 <p class="flow-text center-align red-text darken-3">No new reserved tables</p>

@@ -98,6 +98,8 @@ class Email(View):
         print(response.body)
         print(response.headers)
         print(reservation.email)
+        messages.success(request,
+                         f"An email has been sent to {reservation.email}.")
         return redirect("reserved")
 
 
