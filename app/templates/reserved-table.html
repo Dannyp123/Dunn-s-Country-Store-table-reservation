@@ -35,11 +35,13 @@
                         <div class="d-flex">
                             <div class="col l12 s12">
                                 <form action="{% url 'reserved' %}">
-                                    <button class="btn blue darken-3 waves-effect">Back</button>
+                                    <button class="btn blue darken-3 waves-effect"><i class="fas fa-undo"></i>
+                                        Back</button>
                                 </form>
                             </div>
                             <form action="{% url 'delete-reservation' reserved_table.id %}">
-                                <button class="waves-effect btn red darken-2" type="submit">Remove</button>
+                                <button class="waves-effect btn red darken-2" type="submit"><i
+                                        class="far fa-trash-alt"></i> Remove</button>
                             </form>
                         </div>
                     </div>
@@ -80,8 +82,8 @@
                     </div>
                     <div class="row">
                         <div class="center-align">
-                            <a href="{% url 'send_email' reserved_table.id %}"><button
-                                    class="btn green darken-3">Email</button></a>
+                            <a href="{% url 'send_email' reserved_table.id %}"><button class="btn green darken-3"><i
+                                        class="far fa-envelope"></i> Email</button></a>
                         </div>
                     </div>
                 </div>
