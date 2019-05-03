@@ -109,6 +109,11 @@ class Home(View):
                       {"user_admin": models.TableReservation.objects.all()})
 
 
+class DeleteReservation(View):
+    def get(self, request, id):
+        models.TableReservation.objects.get(id=id).delete()
+        return redirect("reserved")
+
 def register(request):
     if request.method == "POST":
         form = UserRegisterForm(data=request.POST)

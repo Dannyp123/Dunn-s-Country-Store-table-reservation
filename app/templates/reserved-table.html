@@ -31,10 +31,17 @@
                 <div class="card-content">
                     <span class="card-title center-align"> {{ reserved_table.f_name }}
                         {{ reserved_table.l_name }}</span>
-                    <div class="left-align">
-                        <form action="{% url 'reserved' %}">
-                            <button class="btn blue darken-3 waves-effect">Back</button>
-                        </form>
+                    <div class="row">
+                        <div class="d-flex">
+                            <div class="col l12 s12">
+                                <form action="{% url 'reserved' %}">
+                                    <button class="btn blue darken-3 waves-effect">Back</button>
+                                </form>
+                            </div>
+                            <form action="{% url 'delete-reservation' reserved_table.id %}">
+                                <button class="waves-effect btn red darken-2" type="submit">Remove</button>
+                            </form>
+                        </div>
                     </div>
                     <hr>
                     <div class="row">

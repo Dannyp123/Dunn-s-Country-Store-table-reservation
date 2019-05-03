@@ -27,6 +27,17 @@
     {% endfor %}
     {% endif %}
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col l12 s12">
+            {% if reserved|length == 0 %}
+            <p class="flow-text center-align red-text darken-3">No new reserved tables</p>
+            {% else %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
 {% for table in reserved %}
 <div class="container">
 
@@ -34,14 +45,12 @@
         <div class="card-content">
 
             <div>
-                {% if reserved|length == 0 %}
-                <p class="flow-text center-align red-text darken-3">No new reserved tables</p>
-                {% else %}
+
                 <a class="card-title" href="{% url 'reserved-table' table.id%}">{{ table.f_name }}
                     {{ table.l_name }}</a>
                 <p>Table for: {{ table.num_of_people }}</p>
-                {% endif %}
                 <hr />
+
             </div>
         </div>
     </div>

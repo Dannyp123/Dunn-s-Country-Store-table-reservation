@@ -43,5 +43,9 @@ urlpatterns = [
         "reserved-table/<id>",
         views.ReservedTable.as_view(),
         name="reserved-table"),
-    path("reservation/<id>/email", views.Email.as_view(), name="send_email")
+    path("reservation/<id>/email", views.Email.as_view(), name="send_email"),
+    path(
+        "reserved-table/<id>/delete",
+        views.DeleteReservation.as_view(),
+        name="delete-reservation")
 ]
