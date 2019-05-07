@@ -22,11 +22,10 @@
 <div class="col s12 m8 l12">
   <img id="headerImg" class="responsive-img" src="/static/images/menu.jpg" alt="Dunn's Country Store" />
 </div>
-<p class="big-1 center-align">Breakfast</p>
 <div class="container">
+  <p class="big-1 center-align">Breakfast</p>
   <hr />
-  <div class="container">
-    <p class="center-align titles fontColor">Omelets</p>
+  <p class="center-align titles fontColor">Omelets</p>
   <div class="row spacer">
     {% for omelet in BREAKFAST.omelets%}
     <div class="col l4 s12">
@@ -42,8 +41,8 @@
             </p>
           </div>
           <hr />
-          <div class="omeletImgs">
-            <img class="col s12 l10 m8" src="{{ omelet.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ omelet.img }}" />
           </div>
         </div>
       </div>
@@ -51,9 +50,7 @@
     {% endfor %}
   </div>
 
-  <div class="container">
-    <p class="center-align titles fontColor">Breakfast Plates</p>
-  </div>
+  <p class="center-align titles fontColor">Breakfast Plates</p>
   <div class="row spacer">
     {% for plate in BREAKFAST.plates %}
     <div class="col l4 s12">
@@ -69,8 +66,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ plate.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ plate.img }}" />
           </div>
         </div>
       </div>
@@ -78,9 +75,7 @@
     {% endfor %}
   </div>
 
-  <div class="container">
-    <p class="center-align titles fontColor">Breakfast Biscuits</p>
-  </div>
+  <p class="center-align titles fontColor">Breakfast Biscuits</p>
   <div class="row spacer">
     {% for biscuit in BREAKFAST.biscuits %}
     <div class="col l4 s12">
@@ -96,8 +91,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ biscuit.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ biscuit.img }}" />
           </div>
         </div>
       </div>
@@ -142,8 +137,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ r_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ r_burger.img }}" />
           </div>
         </div>
       </div>
@@ -162,8 +157,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ ch_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ ch_burger.img }}" />
           </div>
         </div>
       </div>
@@ -182,8 +177,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ jh_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ jh_burger.img }}" />
           </div>
         </div>
       </div>
@@ -205,8 +200,8 @@
             </p>
           </div>
           <hr />
-          <div class="jcbImages">
-            <img class="col s12 l6 m8" src="{{ jc_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{  jc_burger.img }}" />
           </div>
         </div>
       </div>
@@ -232,8 +227,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ msb_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ msb_burger.img }}" />
           </div>
         </div>
       </div>
@@ -256,8 +251,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ smkh_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ smkh_burger.img }}" />
           </div>
         </div>
       </div>
@@ -280,8 +275,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ pm_burger.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ pm_burger.img }}" />
           </div>
         </div>
       </div>
@@ -306,8 +301,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ pchstk.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ pchstk.img }}" />
           </div>
         </div>
       </div>
@@ -329,8 +324,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ chkphilly.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ chkphilly.img }}" />
           </div>
         </div>
       </div>
@@ -355,8 +350,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ rbbq.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ rbbq.img }}" />
           </div>
         </div>
       </div>
@@ -378,8 +373,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ jbbq.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ jbbq.img }}" />
           </div>
         </div>
       </div>
@@ -401,8 +396,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ bbqpte.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ bbqpte.img }}" />
           </div>
         </div>
       </div>
@@ -424,8 +419,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ bbqpboy.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ bbqpboy.img }}" />
           </div>
         </div>
       </div>
@@ -447,8 +442,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ chopped.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ chopped.img }}" />
           </div>
         </div>
       </div>
@@ -473,8 +468,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ twotend.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ twotend.img }}" />
           </div>
         </div>
       </div>
@@ -496,8 +491,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ threetend.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ threetend.img }}" />
           </div>
         </div>
       </div>
@@ -519,8 +514,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ indiv.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ indiv.img }}" />
           </div>
         </div>
       </div>
@@ -542,8 +537,8 @@
             </p>
           </div>
           <hr />
-          <div class="chickImg">
-            <img class="col s12 l7 m8" src="{{ grllchick.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ grllchick.img }}" />
           </div>
         </div>
       </div>
@@ -568,8 +563,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ grllchickpboy.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ grllchickpboy.img }}" />
           </div>
         </div>
       </div>
@@ -591,8 +586,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ spoboy.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{spoboy.img }}" />
           </div>
         </div>
       </div>
@@ -614,8 +609,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ wingding.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ wingding.img }}" />
           </div>
         </div>
       </div>
@@ -637,8 +632,8 @@
             </p>
           </div>
           <hr />
-          <div class="steakpoboyImg">
-            <img class="col s12 l6 m8" src="{{ steakpboy.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ steakpboy.img }}" />
           </div>
         </div>
       </div>
@@ -663,8 +658,9 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ hambs.img }}" />
+
+          <div class="row">
+            <img class="foodImgs" src="{{ hambs.img }}" />
           </div>
         </div>
       </div>
@@ -686,8 +682,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ ribeyes.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ ribeyes.img }}" />
           </div>
         </div>
       </div>
@@ -712,8 +708,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ tfish.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ tfish.img }}" />
           </div>
         </div>
       </div>
@@ -735,8 +731,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ thfish.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ thfish.img }}" />
           </div>
         </div>
       </div>
@@ -758,8 +754,8 @@
             </p>
           </div>
           <hr />
-          <div class="breakfastImgs">
-            <img class="col s12 l10 m8" src="{{ fifish.img }}" />
+          <div class="row">
+            <img class="foodImgs" src="{{ fifish.img }}" />
           </div>
         </div>
       </div>
@@ -782,8 +778,8 @@
               <p class="center-align">
                 <b>{{ sds.extra }}</b>
               </p>
-              <div class="onionImg">
-                <img class="col s12 l4 m8" src="{{ sds.img }}" />
+              <div class="row">
+                <img class="foodImgs" src="{{ sds.img }}" />
               </div>
             </p>
           </div>
@@ -792,5 +788,5 @@
     </div>
     {% endfor %}
   </div>
-  {% endblock body %}
 </div>
+{% endblock body %}

@@ -299,7 +299,7 @@ BREAKFAST = {
         "name" : "French Fries, Spicy Fries, Baked Beans, Corn Nuggets, Tator Tots, Cole Slaw ",
         "price" : 1.79,
         "extra" : "Onion Rings: $ 2.19,  Potatoe Salad: $ 2.19",
-        "img" : "/static/images/onionrings.jpg"
+        "img" : "/static/images/onion-rings.jpg"
     }]
 
 }

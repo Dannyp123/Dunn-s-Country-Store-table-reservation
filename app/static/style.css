@@ -10,6 +10,8 @@ input:-ms-input-placeholder {
     color: black !important;
 }
 
+
+
 #headerImg {
     width: 100%;
     height: 50%;
@@ -203,6 +205,14 @@ input {
     .titles {
         font-size: 28px;
     }
+
+    .foodImgs {
+        margin-top: 22px;
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* IPADS/TABLETS */
@@ -260,40 +270,12 @@ input {
         height: 250px;
     }
 
-    .omeletImgs {
-        position: relative;
-        left: 95px;
+    .foodImgs {
         margin-top: 22px;
-    }
-
-    .breakfastImgs {
-        position: relative;
-        left: 95px;
-        margin-top: 22px;
-    }
-
-    .onionImg {
-        margin-top: 22px;
-        position: relative;
-        left: 16%;
-    }
-
-    .chickImg {
-        margin-top: 22px;
-        position: relative;
-        left: 18%;
-    }
-
-    .steakpoboyImg {
-        margin-top: 22px;
-        position: relative;
-        left: 18%;
-    }
-
-    .jcbImages {
-        margin-top: 22px;
-        position: relative;
-        left: 18%;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .img {
@@ -311,49 +293,22 @@ input {
 
 /* LARGER SCREENS */
 @media only screen and (min-width: 1000px) {
-    .imgs {
-        position: relative;
-        left: 32px;
-    }
-
     .header {
         font-size: 22px
     }
 
-    .omeletImgs {
-        position: relative;
-        left: 28px;
-    }
+   
 
-    .breakfastImgs {
-        position: relative;
-        left: 28px;
-    }
-
-    .chickImg {
+    .foodImgs {
         margin-top: 22px;
-        position: relative;
-        left: 22%;
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .onionImg {
-        margin-top: 22px;
-        position: relative;
-        left: 33%;
-    }
 
-    .jcbImages {
-        margin-top: 22px;
-        position: relative;
-        left: 25%;
-    }
-
-    .steakpoboyImg {
-        margin-top: 22px;
-        position: relative;
-        left: 24%;
-    }
-
+   
 
     .menuCard {
         height: 460px;
@@ -364,7 +319,7 @@ input {
     }
 
     .burgerCard {
-        height: 560px;
+        height: 635px;
     }
 
     .phillyCard {
@@ -389,7 +344,7 @@ input {
     }
 
     .sideCard {
-        height: 525px;
+        height: 625px;
     }
 
 
@@ -399,11 +354,6 @@ input {
 
     .card-1 {
         height: 448px !important;
-    }
-
-    .img {
-        position: relative;
-        left: 38px;
     }
 
     .titles {
